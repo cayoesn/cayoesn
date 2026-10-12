@@ -15,7 +15,7 @@
 
 Sou engenheiro focado no desenvolvimento de sistemas inteligentes, especializado na interseção entre **Large Language Models (LLMs)**, **Machine Learning (ML)** e **LLMOps**. 
 
-Este portfólio foi projetado como um ecossistema de estudo aprofundado e demonstração prática de engenharia, cobrindo o ciclo de vida completo de aplicações baseadas em IA generativa. Todos os **13 projetos** deste repositório exploram e validam pilares fundamentais da área — desde a orquestração de agentes autônomos, servidores MCP (Model Context Protocol) e sistemas de memória cognitiva até arquiteturas RAG de alta precisão, guardrails de segurança, roteamento semântico, geração sintética de dados, avaliação continuada e treinamento de modelos do zero.
+Este portfólio foi projetado como um ecossistema de estudo aprofundado e demonstração prática de engenharia, cobrindo o ciclo de vida completo de aplicações baseadas em IA generativa. Todos os **14 projetos** deste repositório exploram e validam pilares fundamentais da área — desde a orquestração de agentes autônomos, servidores MCP (Model Context Protocol), emulação enterprise de nuvem (AWS Bedrock) e sistemas de memória cognitiva até arquiteturas RAG de alta precisão, guardrails de segurança, roteamento semântico, geração sintética de dados, avaliação continuada e treinamento de modelos do zero.
 
 ---
 
@@ -38,6 +38,10 @@ graph TD
         SalesAgent --> RAG[🔍 llm-rag<br/>HyDE Query Expansion + Re-Ranker]
     end
 
+    subgraph "Cloud Emulation & Enterprise Platform"
+        Router --> BedrockEmulator[☁️ llm-bedrock-emulator<br/>Full AWS Bedrock Stack + ReAct Multi-Agent]
+    end
+
     subgraph "Offline Evaluation & Synthetic Data Engine"
         Synthetic[🧬 llm-synthetic-data<br/>Evol-Instruct + Dataset Curator] --> Eval[📊 llm-eval-suite<br/>Ragas + DeepEval + G-Eval CoT]
     end
@@ -49,7 +53,7 @@ graph TD
 
 ---
 
-## 💎 Repositórios & Arquiteturas de Destaque (13 Repositórios)
+## 💎 Repositórios & Arquiteturas de Destaque (14 Repositórios)
 
 ### 🤖 1. Agentes Autônomos, Ferramentas & Orquestração Multi-Agente
 
@@ -169,10 +173,19 @@ graph TD
 
 ---
 
+### ☁️ 5. Emulação de Plataformas em Nuvem & Arquiteturas Enterprise (AWS Bedrock)
+
+#### [**`llm-bedrock-emulator`**](https://github.com/cayoesn/llm-bedrock-emulator)
+- **Desafio de Engenharia:** Desenvolver, testar e simular arquiteturas enterprise de IA Generativa compatíveis com o ecossistema AWS Bedrock sem incorrer em custos recorrentes de nuvem ou transferir dados confidenciais para ambientes externos.
+- **Solução & Algoritmo:** Emulador completo de alta fidelidade reproduzindo os 12 pilares do AWS Bedrock em stack 100% open-source: Agentes Autônomos ReAct com Supervisor e Human-in-the-Loop (HITL), Knowledge Bases (KBR) com chunking hierárquico Pai-Filho e Reranker FlashRank ONNX $\mathcal{O}(M \log K)$, Guardrails de segurança (PII regex linear em $\mathcal{O}(1)$, Prompt Shield e Grounding Contextual), Code Interpreter sandboxed (microsserviço isolado 256MB), Prompt Flows declarativos validados por DAG com ordenação topológica de Kahn $\mathcal{O}(V+E)$, Gateway de inferência com fallback resiliente e controle de cotas Token Bucket (RPM/TPM) disparando `ThrottlingException`.
+- **Stack Tecnológica:** `Python 3.12` `AWS Bedrock Emulator` `FastAPI` `LangGraph` `Qdrant` `Ollama` `OpenTelemetry` `Prometheus` `Docker Compose`
+
+---
+
 ## 🛠️ Stack Tecnológica
 
 ```
-🧠 AI & Agentic Frameworks : Model Context Protocol (MCP), LangGraph, LangChain, Graph-RAG, Mem0, Google Antigravity SDK, Ollama, PyTorch
+🧠 AI & Agentic Frameworks : AWS Bedrock Emulation, Model Context Protocol (MCP), LangGraph, LangChain, Graph-RAG, Mem0, Google Antigravity SDK, Ollama, PyTorch
 🔍 Search & Vector DBs     : Qdrant, PostgreSQL (pgvector), Redis, HyDE, BM25 / Sparse Encoders
 🛡️ Guardrails & Safety    : Llama-Guard, NeMo Guardrails, PII Redaction, Anti-Prompt Injection
 📊 LLMOps & Observability  : Langfuse, OpenTelemetry, MLflow, Prometheus, Grafana, Jaeger
