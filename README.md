@@ -15,7 +15,7 @@
 
 Sou engenheiro focado no desenvolvimento de sistemas inteligentes, especializado na interseção entre **Large Language Models (LLMs)**, **Machine Learning (ML)** e **LLMOps**. 
 
-Este portfólio foi projetado como um ecossistema de estudo aprofundado e demonstração prática de engenharia, cobrindo o ciclo de vida completo de aplicações baseadas em IA generativa. Todos os **14 projetos** deste repositório exploram e validam pilares fundamentais da área — desde a orquestração de agentes autônomos, servidores MCP (Model Context Protocol), emulação enterprise de nuvem (AWS Bedrock) e sistemas de memória cognitiva até arquiteturas RAG de alta precisão, guardrails de segurança, roteamento semântico, geração sintética de dados, avaliação continuada e treinamento de modelos do zero.
+Este portfólio foi projetado como um ecossistema de estudo aprofundado e demonstração prática de engenharia, cobrindo o ciclo de vida completo de aplicações baseadas em IA generativa. Todos os **15 projetos** deste repositório exploram e validam pilares fundamentais da área — desde a orquestração de agentes autônomos, servidores MCP (Model Context Protocol), arquiteturas corporativas de nuvem (AWS Bedrock e GCP Vertex AI) e sistemas de memória cognitiva até arquiteturas RAG de alta precisão, guardrails de segurança, roteamento semântico, geração sintética de dados, avaliação continuada e treinamento de modelos do zero.
 
 ---
 
@@ -38,8 +38,9 @@ graph TD
         SalesAgent --> RAG[🔍 llm-rag<br/>HyDE Query Expansion + Re-Ranker]
     end
 
-    subgraph "Cloud Emulation & Enterprise Platform"
+    subgraph "Cloud Platforms & Enterprise Engines"
         Router --> BedrockEmulator[☁️ llm-bedrock-emulator<br/>Full AWS Bedrock Stack + ReAct Multi-Agent]
+        Router --> VertexEngine[🌐 llm-vertex-enterprise-engine<br/>Full GCP Vertex AI Stack + Gemini Router + Context Caching]
     end
 
     subgraph "Offline Evaluation & Synthetic Data Engine"
@@ -53,7 +54,7 @@ graph TD
 
 ---
 
-## 💎 Repositórios & Arquiteturas de Destaque (14 Repositórios)
+## 💎 Repositórios & Arquiteturas de Destaque (15 Repositórios)
 
 ### 🤖 1. Agentes Autônomos, Ferramentas & Orquestração Multi-Agente
 
@@ -173,7 +174,7 @@ graph TD
 
 ---
 
-### ☁️ 5. Emulação de Plataformas em Nuvem & Arquiteturas Enterprise (AWS Bedrock)
+### ☁️ 5. Emulação de Plataformas em Nuvem Enterprise (AWS Bedrock)
 
 #### [**`llm-bedrock-emulator`**](https://github.com/cayoesn/llm-bedrock-emulator)
 - **Desafio de Engenharia:** Desenvolver, testar e simular arquiteturas enterprise de IA Generativa compatíveis com o ecossistema AWS Bedrock sem incorrer em custos recorrentes de nuvem ou transferir dados confidenciais para ambientes externos.
@@ -182,12 +183,21 @@ graph TD
 
 ---
 
+### 🌐 6. Arquitetura Corporativa de IA em Nuvem (Google Cloud Vertex AI)
+
+#### [**`llm-vertex-enterprise-engine`**](https://github.com/cayoesn/llm-vertex-enterprise-engine)
+- **Desafio de Engenharia:** Projetar e operar uma infraestrutura corporativa nativa de IA Generativa de altíssimo desempenho, aderente aos padrões do Google Cloud Platform (GCP) e do Vertex AI, reduzindo custos de inferência em escala, garantindo segurança estrita e permitindo automação autônoma multi-agente de nível Staff.
+- **Solução & Algoritmo:** Plataforma corporativa unificando os 18 pilares do Google Cloud Vertex AI (14 equivalentes industriais e 4 superpoderes exclusivos do Vertex): **Context Caching com TTL e ROI Calculator** (redução de 75% em custos e 80% no TTFT), **Controlled Generation com CFG e Pydantic v2** (imposição estrutural em nível de amostragem), **Multimodal Timestamp Grounding** em streams de vídeo/áudio (`[mm:ss - mm:ss]`), **Vertex Batch Prediction Engine** assíncrono sobre arquivos JSONL com bounded concurrency via `asyncio.Semaphore`, **Vertex Agent Builder Supervisor** com roteamento multi-especialista, **Human Escalation Review Gate (HITL)** para transações críticas, **Vertex Reasoning Engine** com empacotamento hermético via `cloudpickle`, **Kubeflow Pipelines (KFP)** resolvido pelo Algoritmo de Kahn $\mathcal{O}(V + E)$ com detecção estrita de ciclos, **BigQuery NL2SQL com AST Dry-Run** livre de mutações destrutivas, **Vertex Datastore RAG** (chunking hierárquico Pai-Filho, ScaNN MIPS $\mathcal{O}(K \log N)$ e Reranker Semântico), **Google Search Dynamic Grounding**, **Google Model Armor** contra prompt injection e jailbreaks, **Sanitizador Criptográfico Reversível de PII**, controle de cotas **Hierarchical Token Bucket (RPM e TPM)** $\mathcal{O}(1)$, resiliência de rede com **Circuit Breaker e Exponential Jitter**, e **AutoSxS Tournament** com Gemini-as-a-Judge e significância estatística Chi-Square ($p$-value).
+- **Stack Tecnológica:** `Python 3.12` `Google Cloud Vertex AI` `Gemini 1.5 Pro/Flash` `FastAPI` `Pydantic v2` `Kubeflow Pipelines (KFP)` `BigQuery` `ScaNN` `OpenTelemetry` `Prometheus` `Docker Compose`
+
+---
+
 ## 🛠️ Stack Tecnológica
 
 ```
-🧠 AI & Agentic Frameworks : AWS Bedrock Emulation, Model Context Protocol (MCP), LangGraph, LangChain, Graph-RAG, Mem0, Google Antigravity SDK, Ollama, PyTorch
-🔍 Search & Vector DBs     : Qdrant, PostgreSQL (pgvector), Redis, HyDE, BM25 / Sparse Encoders
-🛡️ Guardrails & Safety    : Llama-Guard, NeMo Guardrails, PII Redaction, Anti-Prompt Injection
-📊 LLMOps & Observability  : Langfuse, OpenTelemetry, MLflow, Prometheus, Grafana, Jaeger
-⚙️ Runtime & Infrastructure: Python 3.12, FastAPI, Docker, Docker Compose, CI/CD Quality Gates
+🧠 AI & Agentic Frameworks : GCP Vertex AI, AWS Bedrock Emulation, Model Context Protocol (MCP), LangGraph, LangChain, Graph-RAG, Mem0, Google Antigravity SDK, Ollama, PyTorch
+🔍 Search & Vector DBs     : ScaNN, Qdrant, PostgreSQL (pgvector), BigQuery NL2SQL, Redis, HyDE, BM25 / Sparse Encoders
+🛡️ Guardrails & Safety    : Google Model Armor, Llama-Guard, NeMo Guardrails, Reversible PII Vault, Anti-Prompt Injection
+📊 LLMOps & Observability  : Vertex AutoSxS, Kubeflow Pipelines, Langfuse, OpenTelemetry, MLflow, Prometheus, Grafana, Jaeger
+⚙️ Runtime & Infrastructure: Python 3.12, FastAPI, Docker, Docker Compose, gVisor Code Sandbox, CI/CD Quality Gates
 ```
