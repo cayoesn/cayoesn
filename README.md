@@ -15,7 +15,7 @@
 
 Sou engenheiro focado no desenvolvimento de sistemas inteligentes, especializado na interseção entre **Large Language Models (LLMs)**, **Machine Learning (ML)** e **LLMOps**. 
 
-Este portfólio foi projetado como um ecossistema de estudo aprofundado e demonstração prática de engenharia, cobrindo o ciclo de vida completo de aplicações baseadas em IA generativa. Todos os **12 projetos** deste repositório exploram e validam pilares fundamentais da área — desde a orquestração de agentes autônomos e sistemas de memória cognitiva até arquiteturas RAG de alta precisão, guardrails de segurança, roteamento semântico, geração sintética de dados, avaliação continuada e treinamento de modelos do zero.
+Este portfólio foi projetado como um ecossistema de estudo aprofundado e demonstração prática de engenharia, cobrindo o ciclo de vida completo de aplicações baseadas em IA generativa. Todos os **13 projetos** deste repositório exploram e validam pilares fundamentais da área — desde a orquestração de agentes autônomos, servidores MCP (Model Context Protocol) e sistemas de memória cognitiva até arquiteturas RAG de alta precisão, guardrails de segurança, roteamento semântico, geração sintética de dados, avaliação continuada e treinamento de modelos do zero.
 
 ---
 
@@ -31,6 +31,7 @@ graph TD
         Router --> SalesAgent[🤖 llm-sales-agent<br/>LangGraph + Graph-RAG + Mem0]
         Router --> Orchestrator[⚡ llm-antigravity-orchestrator<br/>Google Antigravity SDK + Gemini]
         Router --> ToolCalling[🛠️ llm-tool-calling<br/>Tool Calling + MLflow/Jaeger]
+        Router --> MCPServer[🔌 llm-mcp-server<br/>Anthropic MCP + Stdio/SSE + OTel]
         Router --> A2A[🌐 llm-a2a-protocol<br/>FIPA Contract Net + Circuit Breaker]
         
         SalesAgent --> Memory[🧠 llm-agent-memory<br/>Ebbinghaus Decay + Qdrant]
@@ -48,7 +49,7 @@ graph TD
 
 ---
 
-## 💎 Repositórios & Arquiteturas de Destaque (12 Repositórios)
+## 💎 Repositórios & Arquiteturas de Destaque (13 Repositórios)
 
 ### 🤖 1. Agentes Autônomos, Ferramentas & Orquestração Multi-Agente
 
@@ -71,6 +72,11 @@ graph TD
 - **Desafio de Engenharia:** Garantir execução segura e rastreável quando agentes acionam ferramentas e APIs externas.
 - **Solução & Algoritmo:** Runtime de chamada de ferramentas com planejamento estruturado JSON, validação de argumentos e observabilidade profunda via **MLflow** e **Jaeger**.
 - **Stack Tecnológica:** `Python` `Tool Calling` `MLflow` `Jaeger` `FastAPI` `Docker`
+
+#### [**`llm-mcp-server`**](https://github.com/cayoesn/llm-mcp-server)
+- **Desafio de Engenharia:** Conectar LLMs a ferramentas, recursos de sistema e templates de prompts externos com isolamento assíncrono estrito, observabilidade total e aderência ao padrão industrial.
+- **Solução & Algoritmo:** Servidor de referência do **Model Context Protocol (MCP)** da Anthropic/Linux Foundation cobrindo 100% da especificação (Tools com geração dinâmica de JSON Schema, Resources com regex templates e subscriptions, Prompts dinâmicos, Sampling / LLM Inversion e Roots boundaries) com transporte duplo (**Stdio** e **FastAPI SSE**) e observabilidade de ponta a ponta (**OpenTelemetry**, **Prometheus** e JSON estruturado).
+- **Stack Tecnológica:** `Python 3.12` `Model Context Protocol` `FastAPI SSE` `OpenTelemetry` `Prometheus` `Pydantic v2` `Docker`
 
 ---
 
@@ -129,7 +135,7 @@ graph TD
 ## 🛠️ Stack Tecnológica
 
 ```
-🧠 AI & Agentic Frameworks : LangGraph, LangChain, Graph-RAG, Mem0, Google Antigravity SDK, Ollama, PyTorch
+🧠 AI & Agentic Frameworks : Model Context Protocol (MCP), LangGraph, LangChain, Graph-RAG, Mem0, Google Antigravity SDK, Ollama, PyTorch
 🔍 Search & Vector DBs     : Qdrant, PostgreSQL (pgvector), Redis, HyDE, BM25 / Sparse Encoders
 🛡️ Guardrails & Safety    : Llama-Guard, NeMo Guardrails, PII Redaction, Anti-Prompt Injection
 📊 LLMOps & Observability  : Langfuse, OpenTelemetry, MLflow, Prometheus, Grafana, Jaeger
