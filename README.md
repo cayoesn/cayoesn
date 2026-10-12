@@ -1,23 +1,22 @@
 <div align="center">
 
 # 🏛️ Cayo Eduardo | AI Engineering Portfolio
-### **Staff AI Engineer & LLMOps Architect | Generative AI & Autonomous Agent Systems**
+### **Desenvolvimento de Software | Sistemas Generativos & LLMs**
 
 [![GitHub](https://img.shields.io/badge/GitHub-CayoEsn-101828?style=for-the-badge&logo=github&logoColor=white)](https://github.com/CayoEsn)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-cayoeduardo-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/cayoeduardo)
 [![Email](https://img.shields.io/badge/Email-cayoesn%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:cayoesn@gmail.com)
 [![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![Architecture](https://img.shields.io/badge/Standard-Staff%20%2F%20Principal-7928CA?style=for-the-badge)](https://github.com/CayoEsn)
 
 </div>
 
 ---
 
-## 🎯 Visão Executiva & Propósito do Portfólio
+## 🎯 Visão Geral & Propósito do Portfólio
 
-Sou engenheiro de software e especialista em inteligência artificial focado no projeto, otimização de complexidade algorítmica, segurança estrita e governança em escala de **sistemas corporativos baseados em LLMs, Redes Neurais e LLMOps**.
+Sou engenheiro de software com foco na construção, integração e otimização de **sistemas baseados em LLMs, Redes Neurais e LLMOps**.
 
-Este portfólio reúne **15 ecossistemas completos e independentes**, desenvolvidos do zero para solucionar os principais desafios da engenharia de IA corporativa moderna:
+Este portfólio reúne **15 ecossistemas completos e independentes**, desenvolvidos do zero para solucionar os principais desafios práticos no uso de IA:
 - **Orquestração Multi-Agente & Protocolos Concorrentes**: Máquinas de estados finitos (FSM), leilões FIPA distribuídos, grafos acíclicos dirigidos (DAGs) com execução em ondas paralelas e conformidade estrita com o Model Context Protocol (MCP).
 - **RAG de Alta Precisão & Memória Cognitiva**: Recuperação em dois estágios com HyDE, Re-Ranking contextual por Cross-Encoder, Reciprocal Rank Fusion (RRF), Top-K via Min-Heaps O(N log K) e decaimento temporal contínuo via Curva de Esquecimento de Ebbinghaus.
 - **Segurança Factual, Moderação & Guardrails**: Filtros de injeção direta e indireta de prompt, classificação de risco Llama-Guard 3, anonimização reversível de PII em passe único O(|T|) e sandboxes herméticos.
@@ -94,7 +93,7 @@ graph TD
 ---
 
 #### 1.1 [**`llm-sales-agent`**](https://github.com/cayoesn/llm-sales-agent)
-> **Agente Conversacional Especialista em Vendas com Grafo de Conhecimento e FSM Estrita**
+> **Agente Conversacional de Vendas com Grafo de Conhecimento e FSM Estrita**
 
 - 🎯 **O que o projeto faz:** Conduz conversas de vendas complexas do início ao fim (prospecção, qualificação, apresentação de propostas, contorno de objeções e fechamento), garantindo cumprimento de regras de alçada comercial sem que o modelo invente descontos ou desvie do funil.
 - ⚙️ **Arquitetura & Como Funciona:**
@@ -269,7 +268,7 @@ graph TD
 
 - 🎯 **O que o projeto faz:** Emula os principais serviços corporativos de IA generativa da Amazon Web Services (AWS Bedrock) em ambiente local ou hermético, facilitando testes sem custo de nuvem e sem tráfego de dados sensíveis na internet.
 - ⚙️ **Arquitetura & Como Funciona:**
-  - **Agentes ReAct e Aprovação Humana (HITL)**: Orquestra múltiplos agentes especialistas e permite pausas para aprovação de operadores antes da execução de comandos sensíveis.
+  - **Agentes ReAct e Aprovação Humana (HITL)**: Orquestra múltiplos agentes cooperativos e permite pausas para aprovação de operadores antes da execução de comandos sensíveis.
   - **Knowledge Bases (KBR)**: Implementa divisão hierárquica pai-filho de documentos e busca vetorial com re-ranking via modelos locais ONNX.
   - **Execução Segura de Código (Code Interpreter)**: Roda trechos de código gerados pelo modelo dentro de sandboxes isolados com controle estrito de memória e tempo.
   - **Prompt Flows em Grafo (DAG)**: Resolve fluxos de instruções interdependentes com detecção e bloqueio de dependências circulares.
@@ -310,5 +309,5 @@ graph TD
 ---
 
 <div align="center">
-  <sub>Construído com excelência técnica, rigor algorítmico e padrão Staff / Principal por <b>Cayo Eduardo</b>.</sub>
+  <sub>Desenvolvido por <b>Cayo Eduardo</b>.</sub>
 </div>
