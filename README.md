@@ -1,11 +1,13 @@
 <div align="center">
 
-# Cayo Eduardo
-### **Staff AI Engineer | LLMOps & Generative AI Systems Specialist**
+# 🏛️ Cayo Eduardo | AI Engineering Portfolio
+### **Staff AI Engineer & LLMOps Architect | Generative AI & Autonomous Agent Systems**
 
 [![GitHub](https://img.shields.io/badge/GitHub-CayoEsn-101828?style=for-the-badge&logo=github&logoColor=white)](https://github.com/CayoEsn)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-cayoeduardo-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/cayoeduardo)
 [![Email](https://img.shields.io/badge/Email-cayoesn%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:cayoesn@gmail.com)
+[![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Architecture](https://img.shields.io/badge/Standard-Staff%20%2F%20Principal-7928CA?style=for-the-badge)](https://github.com/CayoEsn)
 
 </div>
 
@@ -13,14 +15,36 @@
 
 ## 🎯 Visão Executiva & Propósito do Portfólio
 
-Sou engenheiro de software e especialista em inteligência artificial com foco no projeto, escalabilidade e governança de **sistemas corporativos baseados em LLMs, Machine Learning e LLMOps**.
+Sou engenheiro de software e especialista em inteligência artificial focado no projeto, otimização de complexidade algorítmica, segurança estrita e governança em escala de **sistemas corporativos baseados em LLMs, Redes Neurais e LLMOps**.
 
-Este portfólio reúne **15 arquiteturas completas e independentes de nível de produção**, desenvolvidas do zero para validar e resolver os desafios mais complexos da engenharia de IA moderna:
-- **Orquestração Multi-Agente & Protocolos**: Coordenação autônoma, leilões distribuídos (FIPA), integração universal via Model Context Protocol (MCP) e execução determinística por máquinas de estado.
-- **RAG Industrial & Memória Cognitiva**: Expansão de consultas (HyDE), re-ranking contextual, quantização vetorial de alto rendimento e decaimento temporal de memória (Curva de Ebbinghaus).
-- **Segurança, Moderação & Guardrails**: Filtros de injeção de prompt adversarial, classificação de risco Llama-Guard, sanitização reversível de PII com zero persistência em texto claro e sandbox hermético.
-- **Governança em Nuvem Enterprise**: Emulação integral e motores nativos para **AWS Bedrock** e **Google Cloud Vertex AI** com paridade de recursos, controle hierárquico de cotas (RPM/TPM) e resiliência com circuit breakers.
-- **Avaliação Contínua & Fundamentos**: Métricas de fidelidade (Ragas/G-Eval), síntese automatizada de dados de instrução (Evol-Instruct) e pré-treinamento de Transformers do zero em PyTorch.
+Este portfólio reúne **15 ecossistemas completos, independentes e testados hermeticamente**, desenvolvidos do zero para solucionar os gargalos mais críticos da engenharia de IA moderna:
+- **Orquestração Multi-Agente & Protocolos Concorrentes**: Máquinas de estados finitos (FSM), leilões FIPA distribuídos, grafos acíclicos dirigidos (DAGs) com execução em ondas paralelas e conformidade estrita com o Model Context Protocol (MCP).
+- **RAG de Alta Precisão & Memória Cognitiva**: Recuperação em dois estágios com HyDE, Re-Ranking contextual por Cross-Encoder, Reciprocal Rank Fusion (RRF), Top-$K$ via Heaps $\mathcal{O}(N \log K)$ e decaimento contínuo de retenção temporal via Curva de Esquecimento de Ebbinghaus.
+- **Segurança Factual, Moderação & Guardrails**: Filtros de injeção direta e indireta de prompt, classificação de risco Llama-Guard 3, anonimização criptográfica reversível de PII em passe único $\mathcal{O}(|T|)$ e sandboxes herméticos.
+- **Plataformas de Nuvem Enterprise**: Emulação de padrão industrial e motores nativos de altíssima fidelidade para **AWS Bedrock** (12 pilares) e **Google Cloud Vertex AI** (18 pilares e 4 superpoderes exclusivos).
+- **Avaliação Estatística, Síntese de Dados & Deep Learning**: Decomposição atômica de declarações (*Atomic Claim Decomposition*), consistência inter-juízes via Cohen's Kappa ($\kappa$), desduplicação sub-quadrática MinHash LSH $\mathcal{O}(N \cdot K)$ e implementação artesanal de Transformers com Causal Self-Attention e amostragem Nucleus (Top-$P$) em PyTorch.
+
+---
+
+## 📋 Tabela Geral dos 15 Projetos do Ecossistema
+
+| # | Repositório | Domínio Arquitetural | Algoritmo / Estrutura Chave | Stack Principal | Testes & Status |
+| :---: | :--- | :--- | :--- | :--- | :---: |
+| **01** | [**`llm-sales-agent`**](#11-llm-sales-agent) | Agente de Vendas & FSM | Personalized PageRank $\mathcal{O}(\|V\|+\|E\|)$ & Utilidade Sigmóide | LangGraph, Mem0, Qdrant, FastAPI | [![Tests](https://img.shields.io/badge/Tests-59%2F59%20Pass-success?style=flat-square)](https://github.com/cayoesn/llm-sales-agent) |
+| **02** | [**`llm-antigravity-orchestrator`**](#12-llm-antigravity-orchestrator) | Orquestração & Runtime AGY | Hash Chain SHA-256 Imutável & Hooks Assíncronos | Google AGY SDK, Gemini 1.5, FastAPI | [![Tests](https://img.shields.io/badge/Tests-12%2F12%20Pass-success?style=flat-square)](https://github.com/cayoesn/llm-antigravity-orchestrator) |
+| **03** | [**`llm-a2a-protocol`**](#13-llm-a2a-protocol) | Protocolo Distribuído Agent-to-Agent | Leilão FIPA Contract Net Multi-Atributo & TTL | FIPA ACL, Redis, CloudEvents, FastAPI | [![Tests](https://img.shields.io/badge/Tests-18%2F18%20Pass-success?style=flat-square)](https://github.com/cayoesn/llm-a2a-protocol) |
+| **04** | [**`llm-tool-calling`**](#14-llm-tool-calling) | Invocação Estruturada de Tools | DAG Topológico `graphlib`, Ondas Paralelas & Skip Fail-Fast | Tool Engine, OpenTelemetry, MLflow | [![Tests](https://img.shields.io/badge/Tests-10%2F10%20Pass-success?style=flat-square)](https://github.com/cayoesn/llm-tool-calling) |
+| **05** | [**`llm-mcp-server`**](#15-llm-mcp-server) | Servidor Universal MCP | JSON-RPC 2.0, Transporte Duplo (Stdio + SSE) & Sampling | Anthropic MCP, FastAPI SSE, Pydantic v2 | [![Tests](https://img.shields.io/badge/Tests-100%25%20Spec-success?style=flat-square)](https://github.com/cayoesn/llm-mcp-server) |
+| **06** | [**`llm-rag`**](#21-llm-rag) | Recuperação Densa & Re-Ranking | Top-$K$ Heap $\mathcal{O}(N \log K)$, RRF, HyDE & Cross-Encoder | Qdrant, HyDE, Cross-Encoder, FastAPI | [![Tests](https://img.shields.io/badge/Tests-41%2F41%20Pass-success?style=flat-square)](https://github.com/cayoesn/llm-rag) |
+| **07** | [**`llm-agent-memory`**](#22-llm-agent-memory) | Memória Cognitiva Temporal | Decaimento Ebbinghaus $R = e^{-t/S}$ & SIMD NumPy MMR | Qdrant, Redis, Vectorized MMR, FastAPI | [![Tests](https://img.shields.io/badge/Tests-28%2F28%20Pass-success?style=flat-square)](https://github.com/cayoesn/llm-agent-memory) |
+| **08** | [**`llm-semantic-router`**](#23-llm-semantic-router) | Roteador em Cascata & Cache | Cache LRU $\mathcal{O}(1)$ com TTL & BLAS Cosine Similarity | Qdrant, Cascade Routing, FastAPI | [![Tests](https://img.shields.io/badge/Tests-12%2F12%20Pass-success?style=flat-square)](https://github.com/cayoesn/llm-semantic-router) |
+| **09** | [**`llm-llmops`**](#31-llm-llmops) | Gateway Corporativo & LLMOps | Token Bucket $\mathcal{O}(1)$ O(1), Circuit Breaker & Quality Gates | Langfuse, Token Bucket, FastAPI | [![Tests](https://img.shields.io/badge/Tests-7%2F7%20Pass-success?style=flat-square)](https://github.com/cayoesn/llm-llmops) |
+| **10** | [**`llm-guardrails-proxy`**](#32-llm-guardrails-proxy) | Segurança Factual & Moderação | Regex Único $\mathcal{O}(\|T\|)$, De-anonimizador Atômico & Llama-Guard | Llama-Guard 3, PII Vault, FastAPI | [![Tests](https://img.shields.io/badge/Tests-12%2F12%20Pass-success?style=flat-square)](https://github.com/cayoesn/llm-guardrails-proxy) |
+| **11** | [**`llm-eval-suite`**](#41-llm-eval-suite) | Avaliação Offline & Juízes LLM | Atomic Claim Decomposition & Cohen's Kappa ($\kappa$) | Ragas, DeepEval, G-Eval CoT, FastAPI | [![Tests](https://img.shields.io/badge/Tests-7%2F7%20Pass-success?style=flat-square)](https://github.com/cayoesn/llm-eval-suite) |
+| **12** | [**`llm-synthetic-data`**](#42-llm-synthetic-data) | Síntese de Dados & Curadoria | MinHash LSH Sub-Quadrático $\mathcal{O}(N \cdot K)$ & Anti-Loop | Evol-Instruct, MinHash LSH, QLoRA | [![Tests](https://img.shields.io/badge/Tests-7%2F7%20Pass-success?style=flat-square)](https://github.com/cayoesn/llm-synthetic-data) |
+| **13** | [**`llm-create-model`**](#43-llm-create-model) | Redes Neurais & Pré-Treinamento | Transformer Decoder-Only, Causal Attention & Top-$P$ | PyTorch, RMSNorm, MLflow, FastAPI | [![Tests](https://img.shields.io/badge/Tests-21%2F21%20Pass-success?style=flat-square)](https://github.com/cayoesn/llm-create-model) |
+| **14** | [**`llm-bedrock-emulator`**](#51-llm-bedrock-emulator) | Plataforma de Nuvem (AWS) | 12 Pilares Bedrock: KBR, HITL, Sandboxed Code, DAG Kahn | FastAPI, LangGraph, Qdrant, Ollama | [![Tests](https://img.shields.io/badge/Tests-52%2F52%20Pass-success?style=flat-square)](https://github.com/cayoesn/llm-bedrock-emulator) |
+| **15** | [**`llm-vertex-enterprise-engine`**](#61-llm-vertex-enterprise-engine) | Plataforma de Nuvem (GCP) | 18 Pilares & 4 Superpoderes: Context Caching, CFG, ScaNN | Vertex AI, Gemini 1.5, KFP, BigQuery | [![Tests](https://img.shields.io/badge/Tests-55%2F55%20Pass-success?style=flat-square)](https://github.com/cayoesn/llm-vertex-enterprise-engine) |
 
 ---
 
@@ -30,90 +54,135 @@ O diagrama abaixo ilustra como esses 15 subsistemas se integram para compor uma 
 
 ```mermaid
 graph TD
-    Client([👤 Cliente / Consumidor de API]) --> LLMOpsGateway[🏆 llm-llmops<br/>Unified Gateway & Quality Gates]
-    LLMOpsGateway --> Guardrails[🛡️ llm-guardrails-proxy<br/>Llama-Guard + PII Redaction]
-    Guardrails --> Router[🔀 llm-semantic-router<br/>Cascade Model Selector + Semantic Cache]
+    Client([👤 Consumidor de API / Aplicação]) --> LLMOpsGateway[🏆 09. llm-llmops<br/>Unified Gateway & Quality Gates]
+    LLMOpsGateway --> Guardrails[🛡️ 10. llm-guardrails-proxy<br/>Llama-Guard + Single-Pass PII Vault]
+    Guardrails --> Router[🔀 08. llm-semantic-router<br/>Cascade Selector + LRU Semantic Cache]
     
     subgraph "Core Agent Runtime, Protocols & Memory"
-        Router --> SalesAgent[🤖 llm-sales-agent<br/>LangGraph + Graph-RAG + Mem0]
-        Router --> Orchestrator[⚡ llm-antigravity-orchestrator<br/>Google Antigravity SDK + Gemini]
-        Router --> ToolCalling[🛠️ llm-tool-calling<br/>Tool Calling + MLflow/Jaeger]
-        Router --> MCPServer[🔌 llm-mcp-server<br/>Anthropic MCP + Stdio/SSE]
-        Router --> A2A[🌐 llm-a2a-protocol<br/>FIPA Contract Net + Circuit Breaker]
+        Router --> SalesAgent[🤖 01. llm-sales-agent<br/>LangGraph + PPR Graph-RAG + FSM]
+        Router --> Orchestrator[⚡ 02. llm-antigravity-orchestrator<br/>Google AGY SDK + SHA-256 Audit Chain]
+        Router --> ToolCalling[🛠️ 04. llm-tool-calling<br/>DAG Topological Sorter + Wave Parallelism]
+        Router --> MCPServer[🔌 05. llm-mcp-server<br/>Anthropic MCP + Double Transport]
+        Router --> A2A[🌐 03. llm-a2a-protocol<br/>FIPA Contract Net + Weighted Utility]
         
-        SalesAgent --> Memory[🧠 llm-agent-memory<br/>Ebbinghaus Decay + Qdrant]
-        SalesAgent --> RAG[🔍 llm-rag<br/>HyDE Query Expansion + Re-Ranker]
+        SalesAgent --> Memory[🧠 07. llm-agent-memory<br/>Ebbinghaus Decay + SIMD MMR]
+        SalesAgent --> RAG[🔍 06. llm-rag<br/>Heap Top-K + RRF + Cross-Encoder]
     end
 
     subgraph "Cloud Platforms & Enterprise Engines"
-        Router --> BedrockEmulator[☁️ llm-bedrock-emulator<br/>Full AWS Bedrock Stack + ReAct Multi-Agent]
-        Router --> VertexEngine[🌐 llm-vertex-enterprise-engine<br/>Full GCP Vertex AI Stack + Gemini Router + Context Caching]
+        Router --> BedrockEmulator[☁️ 14. llm-bedrock-emulator<br/>Full AWS Bedrock Stack + ReAct Multi-Agent]
+        Router --> VertexEngine[🌐 15. llm-vertex-enterprise-engine<br/>Full GCP Vertex AI Stack + Context Caching]
     end
 
     subgraph "Offline Evaluation & Synthetic Data"
-        Synthetic[🧬 llm-synthetic-data<br/>Evol-Instruct + Dataset Curator] --> Eval[📊 llm-eval-suite<br/>Ragas + DeepEval + G-Eval CoT]
+        Synthetic[🧬 12. llm-synthetic-data<br/>Evol-Instruct + MinHash LSH Deduplication] --> Eval[📊 11. llm-eval-suite<br/>Atomic Claim Decomposition + Cohen's Kappa]
     end
 
     subgraph "Fundamentals & Model Pre-Training"
-        CreateModel[🧠 llm-create-model<br/>Decoder-Only Mini-GPT PyTorch]
+        CreateModel[🧠 13. llm-create-model<br/>Decoder-Only Mini-GPT PyTorch + Top-P Sampling]
     end
 ```
 
 ---
 
-## 💎 Catálogo de Projetos & Arquiteturas (15 Repositórios)
+## 💎 Detalhamento das 15 Arquiteturas por Domínio
+
+---
 
 ### 🤖 1. Agentes Autônomos, Ferramentas & Orquestração Multi-Agente
 
 ---
 
 #### 1.1 [**`llm-sales-agent`**](https://github.com/cayoesn/llm-sales-agent)
-> **Agente Conversacional Especialista em Vendas com Grafo de Conhecimento e FSM**
+> **Agente Conversacional Especialista em Vendas com Grafo de Conhecimento e FSM Estrita**
+> 
+> [![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+> [![Tests](https://img.shields.io/badge/Tests-59%20Passed-success?style=flat-square)](https://github.com/cayoesn/llm-sales-agent)
+> [![Coverage](https://img.shields.io/badge/Coverage-92%25-blue?style=flat-square)](https://github.com/cayoesn/llm-sales-agent)
+> [![Complexity](https://img.shields.io/badge/Algorithm-Personalized%20PageRank%20O(V%2BE)-purple?style=flat-square)](https://github.com/cayoesn/llm-sales-agent)
 
-- 🎯 **Desafio de Engenharia:** Agentes de vendas baseados em prompts simples sofrem com alucinações de preço, esquecimento de objeções durante negociações longas e desvio do funil comercial estabelecido pela empresa.
-- ⚙️ **Arquitetura & Algoritmos:** Orquestração ReAct orientada por Grafo (**LangGraph**) acoplada a uma Máquina de Estados Finitos (**FSM de Negociação**) que impõe fases estritas (*Prospecção $\rightarrow$ Descoberta $\rightarrow$ Proposta $\rightarrow$ Gestão de Objeções $\rightarrow$ Fechamento*). Integração com Grafo de Conhecimento (**Graph-RAG**) para cruzamento relacional entre produtos, planos e compatibilidade, com retenção persistente de fatos do cliente via **Mem0**.
-- 🚀 **Diferenciais & Métricas:** Validação estrita de contratos JSON via **Pydantic v2**, impedindo alucinações comerciais; controle de estado determinístico em 100% dos turnos conversacionais.
-- 🛠️ **Stack Tecnológica:** `Python 3.12` `LangGraph` `Mem0` `Qdrant` `FastAPI` `Docker`
+- 🎯 **Problema de Engenharia:** Agentes de vendas baseados em prompts livres alucinam condições comerciais, desrespeitam regras de desconto e desviam do funil de conversão sob pressão do usuário.
+- ⚙️ **Arquitetura & Algoritmos:**
+  - **FSM de Negociação com Maximização de Utilidade Esperada**: Estados estritos (*Prospecção $\to$ Descoberta $\to$ Proposta $\to$ Objeções $\to$ Fechamento*). O cálculo de contraproposta maximiza a utilidade esperada:
+    $$U_{\text{exp}}(d) = P(\text{conv} \mid d) \times (P_0 \cdot (1 - d) - C)$$
+    onde a probabilidade de conversão $P(\text{conv} \mid d) = \frac{1}{1 + e^{-k(d - d_0)}}$ é modelada por uma função logística calibrada.
+  - **Graph-RAG com Personalized PageRank (PPR)**: O Grafo de Conhecimento em NetworkX executa passeios aleatórios com reinício (*Random Walk with Restart*) em $\mathcal{O}(|V| + |E|)$ para ranquear produtos complementares por centralidade topológica.
+  - **Memória Episódica**: Retenção de preferências do comprador via **Mem0** persistida no **Qdrant**.
+- 🚀 **Diferenciais & Métricas:** 100% dos turnos conversacionais validados via contratos Pydantic v2; zero tolerância a descontos fora da alçada permitida.
+- 🧪 **Teste Hermético:** `docker run --rm -v $(pwd):/workspace -w /workspace -e PYTHONPATH=/workspace portfolio-spec-engine:test pytest tests -v --cov=app`
 
 ---
 
 #### 1.2 [**`llm-antigravity-orchestrator`**](https://github.com/cayoesn/llm-antigravity-orchestrator)
-> **Orquestrador de Agentes de Alta Eficiência com Google Antigravity SDK & Gemini**
+> **Orquestrador de Agentes de Alta Eficiência com Google Antigravity SDK & Cadeia Criptográfica**
+> 
+> [![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+> [![Tests](https://img.shields.io/badge/Tests-12%20Passed-success?style=flat-square)](https://github.com/cayoesn/llm-antigravity-orchestrator)
+> [![Coverage](https://img.shields.io/badge/Coverage-93%25-blue?style=flat-square)](https://github.com/cayoesn/llm-antigravity-orchestrator)
+> [![Audit](https://img.shields.io/badge/Audit-SHA--256%20Merkle%20Chain-orange?style=flat-square)](https://github.com/cayoesn/llm-antigravity-orchestrator)
 
-- 🎯 **Desafio de Engenharia:** Executar tarefas multi-etapa longas e autônomas sem estourar o orçamento de tokens e mantendo rastreabilidade total do ciclo de vida de ferramentas e subagentes.
-- ⚙️ **Arquitetura & Algoritmos:** Runtime autogerenciado construído sobre o **Google Antigravity (AGY) SDK** e modelos Gemini, incorporando interceptadores assíncronos de ciclo de vida (*pre/post-hook* de ferramentas), escalonamento inteligente de tarefas de background e workspace persistente compartilhado entre subagentes de pesquisa e engenharia.
-- 🚀 **Diferenciais & Métricas:** Auditoria fina de consumo de tokens por subagente; paralelização reativa assíncrona com cancelamento cooperativo e telemetria estruturada.
-- 🛠️ **Stack Tecnológica:** `Python 3.12` `Google Antigravity SDK` `Gemini 1.5 Pro` `AsyncIO` `FastAPI` `Docker`
+- 🎯 **Problema de Engenharia:** Risco de explosão orçamentária de tokens e impossibilidade de auditoria em tarefas multi-agente longas e assíncronas.
+- ⚙️ **Arquitetura & Algoritmos:**
+  - **Cadeia Criptográfica SHA-256 (Hash Chain)**: Cada bloco de auditoria de uso e custo é selado sequencialmente:
+    $$\text{current\_hash} = \text{SHA-256}(\text{payload\_canônico} + \text{previous\_hash})$$
+    A integridade de todo o histórico é verificada em tempo linear $\mathcal{O}(N)$ por `verify_audit_chain_integrity()`, detectando instantaneamente adulterações manuais de custo ou tokens.
+  - **Interceptadores de Ciclo de Vida (Hooks)**: Ganchos assíncronos `pre_turn` e `post_turn` interceptando ferramentas e chamadas a modelos Gemini.
+  - **Auditoria de Thinking Tokens**: Separação transparente entre tokens de prompt, geração e tokens de raciocínio de modelos de fronteira.
+- 🚀 **Diferenciais & Métricas:** Rastreabilidade criptográfica imutável; telemetria estruturada exportada via OpenTelemetry e Langfuse.
+- 🧪 **Teste Hermético:** `docker run --rm -v $(pwd):/workspace -w /workspace -e PYTHONPATH=/workspace portfolio-spec-engine:test pytest tests -v --cov=app`
 
 ---
 
 #### 1.3 [**`llm-a2a-protocol`**](https://github.com/cayoesn/llm-a2a-protocol)
-> **Protocolo Distribuído Agent-to-Agent com Leilão FIPA e Circuit Breaker**
+> **Protocolo Distribuído Agent-to-Agent com Leilão FIPA Contract Net e Circuit Breaker**
+> 
+> [![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+> [![Tests](https://img.shields.io/badge/Tests-18%20Passed-success?style=flat-square)](https://github.com/cayoesn/llm-a2a-protocol)
+> [![Coverage](https://img.shields.io/badge/Coverage-91%25-blue?style=flat-square)](https://github.com/cayoesn/llm-a2a-protocol)
+> [![Resilience](https://img.shields.io/badge/Pattern-Tri--State%20Circuit%20Breaker-red?style=flat-square)](https://github.com/cayoesn/llm-a2a-protocol)
 
-- 🎯 **Desafio de Engenharia:** Ausência de padrões de consenso e resiliência na comunicação descentralizada entre múltiplos agentes heterogêneos, gerando gargalos de coordenação e falhas em cascata.
-- ⚙️ **Arquitetura & Algoritmos:** Implementação corporativa do protocolo de interação **FIPA Contract Net**, permitindo que um agente coordenador lance chamadas de proposta (*Call for Proposals - CFP*), avalie lances concorrentes (*Bids*) com base em latência, custo e confiabilidade, e delegue tarefas de forma atômica. Incorpora **Circuit Breaker** com 3 estados (*CLOSED, OPEN, HALF_OPEN*), Dead Letter Queue (DLQ) para mensagens degradadas e formato padronizado **W3C CloudEvents**.
-- 🚀 **Diferenciais & Métricas:** Isolamento de falhas distribuídas com recuperação automática e mensageria assíncrona sobre Redis Pub/Sub com SLA garantido.
-- 🛠️ **Stack Tecnológica:** `Python 3.12` `FIPA ACL` `Circuit Breaker` `Redis` `CloudEvents` `FastAPI` `Docker`
+- 🎯 **Problema de Engenharia:** Ausência de padrões de consenso e resiliência na delegação de tarefas entre múltiplos agentes heterogêneos, gerando falhas em cascata e leilões ineficientes.
+- ⚙️ **Arquitetura & Algoritmos:**
+  - **FIPA Contract Net Protocol Multi-Atributo**: O coordenador lança CFP (*Call for Proposals*) e avalia lances concorrentes através de uma função de pontuação de utilidade ponderada:
+    $$S(\text{bid}) = w_{\text{conf}} \cdot \text{conf} + w_{\text{rep}} \cdot \text{rep} + w_{\text{lat}} \cdot \text{lat}_{\text{norm}} + w_{\text{cost}} \cdot \text{cost}_{\text{norm}} - w_{\text{load}} \cdot \text{load}_{\text{penalty}}$$
+  - **Expiração de Bids (TTL)**: Descarte determinístico de lances com timestamp expirado antes do round de avaliação.
+  - **Tri-State Circuit Breaker**: Estados *CLOSED, OPEN e HALF_OPEN* isolando agentes degradados e direcionando tarefas para Dead Letter Queue (DLQ) com backoff assíncrono e jitter.
+- 🚀 **Diferenciais & Métricas:** Desacoplamento assíncrono com Redis Pub/Sub, padronização W3C CloudEvents e eliminação de deadlocks distribuídos.
+- 🧪 **Teste Hermético:** `docker run --rm -v $(pwd):/workspace -w /workspace -e PYTHONPATH=/workspace portfolio-spec-engine:test pytest tests -v --cov=app`
 
 ---
 
 #### 1.4 [**`llm-tool-calling`**](https://github.com/cayoesn/llm-tool-calling)
-> **Engine de Invocação de Ferramentas com Validação Estrita e Rastreamento Distribuído**
+> **Engine de Execução em Grafo (DAG) com Validação Estrita e Rastreamento Distribuído**
+> 
+> [![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+> [![Tests](https://img.shields.io/badge/Tests-10%20Passed-success?style=flat-square)](https://github.com/cayoesn/llm-tool-calling)
+> [![Coverage](https://img.shields.io/badge/Coverage-90%25-blue?style=flat-square)](https://github.com/cayoesn/llm-tool-calling)
+> [![Concurrency](https://img.shields.io/badge/Scheduler-DAG%20Wave%20Parallelism-blueviolet?style=flat-square)](https://github.com/cayoesn/llm-tool-calling)
 
-- 🎯 **Desafio de Engenharia:** Modelos de linguagem falham frequentemente ao gerar argumentos com tipos incorretos ao invocar APIs corporativas, provocando exceções em tempo de execução e falta de visibilidade do fluxo de dados.
-- ⚙️ **Arquitetura & Algoritmos:** Mecanismo de despacho e reflexão de schemas com parsing estruturado via Pydantic, verificação de limites numéricos e validação semântica em tempo real. Implementa estratégia de autocorreção recursiva com prompt de reparo de erro e observabilidade distribuída profunda através de instrumentação no **MLflow** e rastreamento de traces no **Jaeger**.
-- 🚀 **Diferenciais & Métricas:** Eliminação de 100% dos erros de tipagem em chamadas de ferramentas de produção e auditoria detalhada de cada invocação por span de telemetria.
-- 🛠️ **Stack Tecnológica:** `Python 3.12` `Tool Calling Engine` `MLflow` `Jaeger` `OpenTelemetry` `FastAPI` `Docker`
+- 🎯 **Problema de Engenharia:** LLMs que geram chamadas com interdependências complexas travam quando ferramentas são disparadas sequencialmente ou quando uma falha upstream causa execuções desnecessárias downstream.
+- ⚙️ **Arquitetura & Algoritmos:**
+  - **Escalonador Topológico DAG (`graphlib.TopologicalSorter`)**: Constrói o grafo de dependências entre `call_id` e `depends_on`, executando nós independentes em ondas concorrentes via `asyncio.gather`.
+  - **Propagação de Skip Fail-Fast**: Se uma ferramenta upstream falha (`ToolExecutionStatus.ERROR`), todas as ferramentas dependentes são marcadas instantaneamente como `SKIPPED`, economizando tempo e chamadas de rede.
+  - **Detecção de Ciclos**: Validação estrita de aciclicidade impedindo travamentos em loop infinito.
+- 🚀 **Diferenciais & Métricas:** Redução drástica no tempo total de execução de planos multi-ferramentas e rastreamento de spans de telemetria no MLflow e Jaeger.
+- 🧪 **Teste Hermético:** `docker run --rm -v $(pwd):/workspace -w /workspace -e PYTHONPATH=/workspace portfolio-spec-engine:test pytest tests -v`
 
 ---
 
 #### 1.5 [**`llm-mcp-server`**](https://github.com/cayoesn/llm-mcp-server)
 > **Servidor Universal de Referência do Model Context Protocol (Anthropic MCP)**
+> 
+> [![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+> [![Spec](https://img.shields.io/badge/Spec-MCP%20JSON--RPC%202.0-blue?style=flat-square)](https://modelcontextprotocol.io/)
+> [![Transport](https://img.shields.io/badge/Transport-Stdio%20%2B%20FastAPI%20SSE-brightgreen?style=flat-square)](https://github.com/cayoesn/llm-mcp-server)
 
-- 🎯 **Desafio de Engenharia:** Conectar LLMs a ferramentas, bancos de dados, diagnósticos de sistema e templates de prompts externos sem criar integrações proprietárias frágeis e sem controle de observabilidade.
-- ⚙️ **Arquitetura & Algoritmos:** Implementação de referência integral cobrindo todas as primitivas da especificação do **Model Context Protocol (MCP)** da Anthropic/Linux Foundation: **Tools Registry** (geração dinâmica de JSON Schema e execução assíncrona), **Resources Registry** (roteamento declarativo com suporte a templates regex e assinaturas reativas), **Prompts Registry** (gerenciamento de templates com injeção de contexto), **Sampling / LLM Inversion** (capacidade do servidor solicitar inferência ao cliente) e **Roots Boundaries** (limitação estrita de acesso ao sistema de arquivos).
-- 🚀 **Diferenciais & Métricas:** Transporte duplo nativo (**Stdio** para agentes CLI como Claude Desktop e **FastAPI SSE** com endpoints `/sse` e `/messages` para microsserviços), rastreamento distribuído via **OpenTelemetry**, métricas corporativas no **Prometheus** e 100% de conformidade com a especificação JSON-RPC 2.0.
-- 🛠️ **Stack Tecnológica:** `Python 3.12` `Model Context Protocol (MCP)` `FastAPI SSE` `OpenTelemetry` `Prometheus` `Pydantic v2` `Docker`
+- 🎯 **Problema de Engenharia:** Integrações proprietárias e fragmentadas entre modelos de linguagem e ferramentas corporativas geram manutenção excessiva e falta de padronização.
+- ⚙️ **Arquitetura & Algoritmos:**
+  - **Implementação Integral das Primitivas MCP**: *Tools Registry* (despacho assíncrono e reflexão de schemas), *Resources Registry* (templates regex e assinaturas reativas), *Prompts Registry* (templates parametrizados), *Sampling / LLM Inversion* (servidor solicitando inferência ao cliente) e *Roots Boundaries* (sandbox de filesystem).
+  - **Transporte Duplo**: Suporte nativo a **Stdio** (para clientes locais como Claude Desktop) e **FastAPI SSE** (`/sse` e `/messages` para arquitetura de microsserviços distribuídos).
+- 🚀 **Diferenciais & Métricas:** 100% de conformidade com a especificação oficial MCP da Anthropic/Linux Foundation e observabilidade com Prometheus e OpenTelemetry.
+- 🧪 **Teste Hermético:** `docker compose run --rm mcp-server pytest tests/ -v`
 
 ---
 
@@ -122,34 +191,60 @@ graph TD
 ---
 
 #### 2.1 [**`llm-rag`**](https://github.com/cayoesn/llm-rag)
-> **Pipeline de Retrieval-Augmented Generation de Alta Precisão com HyDE & Re-Ranking**
+> **Pipeline RAG de Alta Precisão com Heaps $\mathcal{O}(N \log K)$, RRF & Cross-Encoder**
+> 
+> [![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+> [![Tests](https://img.shields.io/badge/Tests-41%20Passed-success?style=flat-square)](https://github.com/cayoesn/llm-rag)
+> [![Coverage](https://img.shields.io/badge/Coverage-94%25-blue?style=flat-square)](https://github.com/cayoesn/llm-rag)
+> [![Complexity](https://img.shields.io/badge/Top--K-Heap%20O(N%20log%20K)-purple?style=flat-square)](https://github.com/cayoesn/llm-rag)
 
-- 🎯 **Desafio de Engenharia:** RAGs ingênuos (*Naive RAG*) sofrem com baixo recall em consultas conceituais, confusão semântica e perda de relevância quando o vocabulário da pergunta diverge do texto do documento.
-- ⚙️ **Arquitetura & Algoritmos:** Pipeline de busca em dois estágios: primeiro, utiliza **HyDE (Hypothetical Document Embeddings)** para projetar o vetor da consulta no mesmo espaço semântico das respostas ideais; em seguida, aplica **Contextual Cross-Encoder Re-Ranker** para recalcular a pontuação dos top-$k$ candidatos densos recuperados do **Qdrant**, filtrando ruídos irrelevantes antes da sintetização.
-- 🚀 **Diferenciais & Métricas:** Ingestão assíncrona em lote com chunking semântico; aumento substancial de *Context Precision* e *Faithfulness* medidos em benchmarks Ragas.
-- 🛠️ **Stack Tecnológica:** `Python 3.12` `HyDE` `Qdrant` `Cross-Encoder` `MLflow` `FastAPI` `Docker`
+- 🎯 **Problema de Engenharia:** Recuperação densa tradicional (*Naive RAG*) apresenta baixa relevância em consultas conceituais abstratas e sobrecarrega a síntese com ordenações completas $\mathcal{O}(N \log N)$.
+- ⚙️ **Arquitetura & Algoritmos:**
+  - **Top-$K$ Otimizado via Heaps $\mathcal{O}(N \log K)$**: Uso de `heapq.nlargest` para extração dos melhores candidatos sem custo de ordenação total do dataset.
+  - **Reciprocal Rank Fusion (RRF)**: Fusão balanceada de múltiplos rankings:
+    $$RRF\_Score(d) = \sum_{r \in R} \frac{1}{60 + \text{rank}_r(d)}$$
+  - **HyDE Assíncrono (Hypothetical Document Embeddings)**: Gera resposta hipotética em segundo plano para projetar o vetor da consulta no mesmo subespaço das respostas reais.
+  - **Cross-Encoder Contextual & Compressão**: Re-ranking com remoção de sentenças irrelevantes antes do prompt final.
+- 🚀 **Diferenciais & Métricas:** Aumento substancial de *Context Precision* no Ragas e tempo de busca sub-15ms no Qdrant.
+- 🧪 **Teste Hermético:** `docker run --rm -v $(pwd):/workspace -w /workspace -e PYTHONPATH=/workspace portfolio-spec-engine:test pytest tests -v --cov=app`
 
 ---
 
 #### 2.2 [**`llm-agent-memory`**](https://github.com/cayoesn/llm-agent-memory)
-> **Motor de Memória Cognitiva de Longo Prazo Baseado na Curva de Esquecimento de Ebbinghaus**
+> **Motor de Memória Cognitiva de Longo Prazo com Curva de Ebbinghaus & SIMD NumPy MMR**
+> 
+> [![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+> [![Tests](https://img.shields.io/badge/Tests-28%20Passed-success?style=flat-square)](https://github.com/cayoesn/llm-agent-memory)
+> [![Coverage](https://img.shields.io/badge/Coverage-92%25-blue?style=flat-square)](https://github.com/cayoesn/llm-agent-memory)
+> [![Math](https://img.shields.io/badge/Decay-Ebbinghaus%20Retention-orange?style=flat-square)](https://github.com/cayoesn/llm-agent-memory)
 
-- 🎯 **Desafio de Engenharia:** Manter o histórico conversacional bruto satura a janela de contexto do LLM com informações obsoletas ou irrelevantes, elevando custos e degradando o raciocínio do modelo.
-- ⚙️ **Arquitetura & Algoritmos:** Sistema de memória cognitiva com decaimento temporal contínuo governado matematicamente pela **Curva de Esquecimento de Hermann Ebbinghaus**:
-  $$R = e^{-\frac{t}{S}}$$
-  onde $R$ é a probabilidade de retenção, $t$ o tempo decorrido desde o último acesso e $S$ a força da memória. Cada recuperação reforça a estabilidade $S$, enquanto memórias abaixo do limiar crítico sofrem expurgo ou consolidação em resumo de longo prazo no **Qdrant**, com buffer de trabalho ultra-rápido no **Redis**.
-- 🚀 **Diferenciais & Métricas:** Redução de até 70% no consumo de tokens de histórico com preservação intacta de fatos críticos e preferências do usuário ao longo de semanas.
-- 🛠️ **Stack Tecnológica:** `Python 3.12` `Ebbinghaus Algorithm` `Qdrant` `Redis` `FastAPI` `Docker`
+- 🎯 **Problema de Engenharia:** Históricos conversacionais brutos esgotam a janela de contexto com informações antigas ou irrelevantes, elevando custos e gerando confusão contextual.
+- ⚙️ **Arquitetura & Algoritmos:**
+  - **Decaimento Contínuo de Ebbinghaus**: Probabilidade de retenção temporal modelada matematicamente:
+    $$R(t) = e^{-\frac{t}{S}}$$
+    onde cada acesso subsequente reforça a estabilidade mnemônica $S$.
+  - **MMR Vetorizado via SIMD NumPy**: Maximal Marginal Relevance implementado com produtos escalares matriciais $\mathcal{O}(K \cdot D)$, balanceando relevância e diversidade sem loops aninhados em Python.
+  - **Consolidação em Lote Tri-Tier**: Memória de curto prazo no Redis consolidada periodicamente em clusters de longo prazo no Qdrant.
+- 🚀 **Diferenciais & Métricas:** Redução de mais de 65% de tokens de histórico com retenção permanente de preferências essenciais.
+- 🧪 **Teste Hermético:** `docker run --rm -v $(pwd):/workspace -w /workspace -e PYTHONPATH=/workspace portfolio-spec-engine:test pytest tests -v --cov=app`
 
 ---
 
 #### 2.3 [**`llm-semantic-router`**](https://github.com/cayoesn/llm-semantic-router)
-> **Roteador Semântico com Seleção em Cascata de Modelos e Cache Semântico Sub-5ms**
+> **Roteador Semântico com Seleção em Cascata e Cache Semântico LRU $\mathcal{O}(1)$ Sub-5ms**
+> 
+> [![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+> [![Tests](https://img.shields.io/badge/Tests-12%20Passed-success?style=flat-square)](https://github.com/cayoesn/llm-semantic-router)
+> [![Coverage](https://img.shields.io/badge/Coverage-93%25-blue?style=flat-square)](https://github.com/cayoesn/llm-semantic-router)
+> [![Cache](https://img.shields.io/badge/Cache-LRU%20O(1)%20%2B%20TTL-success?style=flat-square)](https://github.com/cayoesn/llm-semantic-router)
 
-- 🎯 **Desafio de Engenharia:** Encaminhar todas as perguntas corporativas para modelos de fronteira (e.g. GPT-4o ou Claude Opus) gera custos astronômicos e latências elevadas para consultas rotineiras e repetitivas.
-- ⚙️ **Arquitetura & Algoritmos:** Seletor de modelos em cascata baseado em custo (*Cost-Aware Cascade Selector*): classifica a complexidade do prompt através de embeddings densos; consultas triviais são respondidas por modelos leves (SLMs locais), enquanto apenas tarefas de alto raciocínio alcançam o modelo frontier. Adicionalmente, integra um **Semantic Cache** baseado em similaridade de cosseno ($\theta \ge 0.95$) indexado no **Qdrant**.
-- 🚀 **Diferenciais & Métricas:** Latência de resposta do cache $<5\text{ms}$; redução de custos operacionais de API em até 60% sem degradação perceptível na qualidade percebida.
-- 🛠️ **Stack Tecnológica:** `Python 3.12` `Semantic Cache` `Cascade Router` `Qdrant` `FastAPI` `Docker`
+- 🎯 **Problema de Engenharia:** Despachar 100% das requisições para LLMs de fronteira gera faturas astronômicas e latências desnecessárias para consultas repetitivas.
+- ⚙️ **Arquitetura & Algoritmos:**
+  - **Cache Semântico LRU Limitado com TTL**: Cache in-memory $\mathcal{O}(1)$ com eviction determinístico via `OrderedDict` e descarte automático de entradas obsoletas por TTL.
+  - **Cálculo de Cossenos Acelerado por BLAS**: Computação matricial de similaridade semântica contra centróides no Qdrant.
+  - **Roteamento em Cascata**: Consultas simples são direcionadas a SLMs locais; apenas prompts de alta complexidade atingem o frontier model.
+- 🚀 **Diferenciais & Métricas:** Resposta de cache $<5\text{ms}$ e corte de custos de API de até 60%.
+- 🧪 **Teste Hermético:** `docker run --rm -v $(pwd):/workspace -w /workspace -e PYTHONPATH=/workspace portfolio-spec-engine:test pytest tests -v --cov=app`
 
 ---
 
@@ -158,22 +253,39 @@ graph TD
 ---
 
 #### 3.1 [**`llm-llmops`**](https://github.com/cayoesn/llm-llmops)
-> **Arquitetura de Referência Industrial de LLMOps com Quality Gates e Governança CI/CD**
+> **Gateway Industrial de LLMOps com Token Bucket $\mathcal{O}(1)$, Circuit Breaker e Quality Gates**
+> 
+> [![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+> [![Tests](https://img.shields.io/badge/Tests-7%20Passed-success?style=flat-square)](https://github.com/cayoesn/llm-llmops)
+> [![Coverage](https://img.shields.io/badge/Coverage-92%25-blue?style=flat-square)](https://github.com/cayoesn/llm-llmops)
+> [![Resilience](https://img.shields.io/badge/Pattern-Token%20Bucket%20O(1)-red?style=flat-square)](https://github.com/cayoesn/llm-llmops)
 
-- 🎯 **Desafio de Engenharia:** Falta de padronização corporativa no ciclo de vida de aplicações generativas, sem controle centralizado de consumo, rastreabilidade de custos ou testes automatizados contra regressão de respostas em deploys.
-- ⚙️ **Arquitetura & Algoritmos:** Plataforma unificada de engenharia atuando como API Gateway corporativo com limites de taxa, cache semântico compartilhado e observabilidade centralizada via **Langfuse**. Implementa esteiras de **CI/CD Quality Gates** que executam testes automatizados de regressão semântica e avaliações de segurança antes de liberar atualizações em produção.
-- 🚀 **Diferenciais & Métricas:** Rastreamento unificado de custo por time/token, latência por modelo e bloqueio automático de deploys caso o índice de alucinação aumente.
-- 🛠️ **Stack Tecnológica:** `Python 3.12` `Langfuse` `Quality Gates CI/CD` `Semantic Cache` `FastAPI` `Docker Compose`
+- 🎯 **Problema de Engenharia:** Falta de governança corporativa de quotas, ausência de isolamento de falhas de provedores externos e risco de deploy com regressões semânticas.
+- ⚙️ **Arquitetura & Algoritmos:**
+  - **Rate Limiter Token Bucket $\mathcal{O}(1)$**: Cálculo temporal contínuo sem locks globais pesados, garantindo controle de throughput com complexidade constante.
+  - **Circuit Breaker Tri-State**: Interrompe requisições ao provedor LLM em caso de falhas consecutivas e aciona resposta de contingência (*fallback guarantee*).
+  - **Quality Gates CI/CD**: Verificação de regressão semântica e custos antes da promoção de novos prompts para produção.
+- 🚀 **Diferenciais & Métricas:** Observabilidade centralizada via Langfuse, métricas de tokens e latência no Prometheus e SLA de 99.9%.
+- 🧪 **Teste Hermético:** `docker run --rm -v $(pwd):/workspace -w /workspace -e PYTHONPATH=/workspace portfolio-spec-engine:test pytest tests -v --cov=app`
 
 ---
 
 #### 3.2 [**`llm-guardrails-proxy`**](https://github.com/cayoesn/llm-guardrails-proxy)
-> **Proxy de Segurança Industrial com Classificador Llama-Guard e Sanitizador de PII**
+> **Proxy de Segurança Industrial com Regex Unificado $\mathcal{O}(|T|)$, Cofre PII e Llama-Guard 3**
+> 
+> [![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+> [![Tests](https://img.shields.io/badge/Tests-12%20Passed-success?style=flat-square)](https://github.com/cayoesn/llm-guardrails-proxy)
+> [![Coverage](https://img.shields.io/badge/Coverage-95%25-blue?style=flat-square)](https://github.com/cayoesn/llm-guardrails-proxy)
+> [![Security](https://img.shields.io/badge/Security-Llama--Guard%20%2B%20PII%20Vault-darkgreen?style=flat-square)](https://github.com/cayoesn/llm-guardrails-proxy)
 
-- 🎯 **Desafio de Engenharia:** Vulnerabilidade a vazamento inadvertido de dados pessoais protegidos por LGPD/GDPR, ataques de prompt injection, jailbreaks e respostas com conteúdo tóxico ou fora de compliance.
-- ⚙️ **Arquitetura & Algoritmos:** Proxy de segurança de alta vazão operando como firewall em duas camadas: na entrada, executa **PII Sanitizer Engine** determinístico (substituindo CPFs, cartões e e-mails por tokens opacos reversíveis) e detector de heurísticas de jailbreak; em paralelo, aciona o **Llama-Guard** estruturado em 6 categorias de risco (*Hate Speech, Harassment, Sexual, Violence, Self-Harm, Criminal*).
-- 🚀 **Diferenciais & Métricas:** Tempo de inspeção por requisição $<25\text{ms}$; conformidade total de anonimização e proteção contra injeções diretas e indiretas de prompt.
-- 🛠️ **Stack Tecnológica:** `Python 3.12` `Llama-Guard 3` `PII Sanitizer` `FastAPI` `Docker`
+- 🎯 **Problema de Engenharia:** Exposição a vazamento de dados sensíveis (LGPD/GDPR), ataques de injeção de prompt adversarial (inclusive ofuscados em Base64) e respostas tóxicas.
+- ⚙️ **Arquitetura & Algoritmos:**
+  - **Sanitizador PII em Passe Único $\mathcal{O}(|T|)$**: Regex único compilado que anonimiza CPFs, cartões e e-mails simultaneamente, mapeando para tokens reversíveis sem colisões.
+  - **De-anonimizador Atômico**: Restauração dos dados no retorno sem persistência em texto claro.
+  - **Defesa Base64 & Delimitadores**: Inspeção heurística decodificando payloads ofuscados antes do envio ao modelo.
+  - **Llama-Guard 3 Classifier**: Classificação em 6 categorias de risco de segurança da Meta.
+- 🚀 **Diferenciais & Métricas:** Latência média de inspeção $<20\text{ms}$ e zero retenção de dados sensíveis em logs.
+- 🧪 **Teste Hermético:** `docker run --rm -v $(pwd):/workspace -w /workspace -e PYTHONPATH=/workspace portfolio-spec-engine:test pytest tests -v --cov=app`
 
 ---
 
@@ -182,32 +294,60 @@ graph TD
 ---
 
 #### 4.1 [**`llm-eval-suite`**](https://github.com/cayoesn/llm-eval-suite)
-> **Framework de Avaliação Contínua e Benchmark com Ragas, DeepEval & G-Eval CoT**
+> **Framework de Avaliação Contínua com Decomposição Atômica de Claims & Cohen's Kappa**
+> 
+> [![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+> [![Tests](https://img.shields.io/badge/Tests-7%20Passed-success?style=flat-square)](https://github.com/cayoesn/llm-eval-suite)
+> [![Coverage](https://img.shields.io/badge/Coverage-96%25-blue?style=flat-square)](https://github.com/cayoesn/llm-eval-suite)
+> [![Statistics](https://img.shields.io/badge/Calibration-Cohen's%20Kappa-blue?style=flat-square)](https://github.com/cayoesn/llm-eval-suite)
 
-- 🎯 **Desafio de Engenharia:** Avaliações humanas de respostas de LLM são lentas, caras e subjetivas, tornando inviável medir regressões de performance após alterações de prompts ou ajustes de modelos.
-- ⚙️ **Arquitetura & Algoritmos:** Suíte de avaliação quantitativa offline combinando as principais metodologias da indústria: métricas do **Ragas & DeepEval** (*Faithfulness, Answer Relevance, Context Precision e Context Recall*) somadas ao framework **G-Eval (LLM-as-a-Judge)** com Cadeia de Pensamento (*Chain-of-Thought - CoT*) para pontuação probabilística fundamentada.
-- 🚀 **Diferenciais & Métricas:** Execução em pipelines automatizados com relatórios visuais de drift de qualidade e geração programática de Golden Datasets sintéticos para teste de hipóteses.
-- 🛠️ **Stack Tecnológica:** `Python 3.12` `Ragas` `DeepEval` `G-Eval CoT` `FastAPI` `Docker`
+- 🎯 **Problema de Engenharia:** Falta de precisão em métricas de fidelidade factual (alucinações parciais não detectadas) e ausência de calibração estatística entre múltiplos juízes LLM.
+- ⚙️ **Arquitetura & Algoritmos:**
+  - **Atomic Claim Decomposition Faithfulness**: Decomposição determinística das respostas em proposições atômicas unitárias, com validação de suporte no contexto:
+    $$\text{Faithfulness} = \frac{\sum_{i=1}^M \mathbb{I}(\text{claim}_i \text{ é suportado no contexto})}{M}$$
+  - **Concordância Inter-Juízes via Cohen's Kappa**: Medição rigorosa de alinhamento entre avaliadores automáticos:
+    $$\kappa = \frac{P_o - P_e}{1 - P_e}$$
+  - **RAG Triad & DeepEval**: Avaliação quantitativa de *Answer Relevancy*, *Context Precision* e *Recall*.
+- 🚀 **Diferenciais & Métricas:** Identificação cirúrgica de alucinações numéricas e geração de relatórios de benchmark em Markdown/JSON.
+- 🧪 **Teste Hermético:** `docker run --rm -v $(pwd):/workspace -w /workspace -e PYTHONPATH=/workspace portfolio-spec-engine:test pytest tests -v --cov=app`
 
 ---
 
 #### 4.2 [**`llm-synthetic-data`**](https://github.com/cayoesn/llm-synthetic-data)
-> **Gerador e Curador Automatizado de Dados de Instrução com Evol-Instruct & MinHash**
+> **Gerador e Curador Automatizado de Dados com MinHash LSH Sub-Quadrático & Anti-Loop**
+> 
+> [![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+> [![Tests](https://img.shields.io/badge/Tests-7%20Passed-success?style=flat-square)](https://github.com/cayoesn/llm-synthetic-data)
+> [![Coverage](https://img.shields.io/badge/Coverage-95%25-blue?style=flat-square)](https://github.com/cayoesn/llm-synthetic-data)
+> [![Algorithm](https://img.shields.io/badge/Deduplication-MinHash%20LSH%20O(N*K)-purple?style=flat-square)](https://github.com/cayoesn/llm-synthetic-data)
 
-- 🎯 **Desafio de Engenharia:** Escassez de dados de instrução de alta complexidade e variedade no domínio empresarial para realização de fine-tuning proprietário eficaz.
-- ⚙️ **Arquitetura & Algoritmos:** Motor gerador autônomo baseado no método **Evol-Instruct**, gerando mutações de complexidade em duas dimensões: *In-Depth Evolution* (adição de restrições, aprofundamento do raciocínio e cálculo) e *In-Breadth Evolution* (diversificação temática). Os dados gerados passam por um pipeline de curadoria estrita com desduplicação por similaridade de Jaccard e **MinHash**, seguido de scoring de qualidade via LLM.
-- 🚀 **Diferenciais & Métricas:** Filtragem de ruídos com descarte de 40% de dados redundantes; geração de datasets prontos para fine-tuning supervisionado (**SFT / QLoRA**).
-- 🛠️ **Stack Tecnológica:** `Python 3.12` `Evol-Instruct` `MinHash / LSH` `QLoRA` `Docker`
+- 🎯 **Problema de Engenharia:** Custos proibitivos de deduplicação pareada $\mathcal{O}(N^2)$ em datasets sintéticos volumosos e contaminação por respostas em loop degenerado.
+- ⚙️ **Arquitetura & Algoritmos:**
+  - **MinHash LSH Sub-Quadrático $\mathcal{O}(N \cdot K)$**: Locality-Sensitive Hashing com $K=64$ permutações e $b=16$ bandas de $r=4$ linhas. A probabilidade de colisão segue a curva S:
+    $$P(\text{colisão}) = 1 - (1 - s^r)^b$$
+  - **Detector de Loop Degenerado Anti-Alucinação**: Janela deslizante que identifica repetições de blocos de $n$-gramas ($1 \le L \le 8$) descartando saídas com colapso de amostragem.
+  - **Evol-Instruct Generator**: Mutações sintéticas *in-depth* e *in-breadth* com preparação para fine-tuning supervisionado (**QLoRA**).
+- 🚀 **Diferenciais & Métricas:** Desduplicação instantânea de milhares de amostras sem gargalo quadrático.
+- 🧪 **Teste Hermético:** `docker run --rm -v $(pwd):/workspace -w /workspace -e PYTHONPATH=/workspace portfolio-spec-engine:test pytest tests -v --cov=app`
 
 ---
 
 #### 4.3 [**`llm-create-model`**](https://github.com/cayoesn/llm-create-model)
-> **Implementação Educacional de um Transformer Decoder-Only (Mini-GPT) do Zero em PyTorch**
+> **Transformer Decoder-Only (Mini-GPT) do Zero em PyTorch com Causal Attention & Top-$P$**
+> 
+> [![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+> [![PyTorch](https://img.shields.io/badge/PyTorch-2.14-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)](https://pytorch.org/)
+> [![Tests](https://img.shields.io/badge/Tests-21%20Passed-success?style=flat-square)](https://github.com/cayoesn/llm-create-model)
+> [![Coverage](https://img.shields.io/badge/Coverage-92%25-blue?style=flat-square)](https://github.com/cayoesn/llm-create-model)
 
-- 🎯 **Desafio de Engenharia:** Compreender com profundidade matemática os componentes internos das redes neurais de atenção generativa sem depender de camadas de abstração de bibliotecas prontas.
-- ⚙️ **Arquitetura & Algoritmos:** Construção artesanal e didática de uma arquitetura Transformer completa estilo GPT: Multi-Head Self-Attention vetorializada, codificação de posições (Rotary Positional Embeddings - RoPE), conexões residuais, normalização RMSNorm e projeção Feed-Forward com ativação SwiGLU. Inclui rotina de inferência autoregressiva com otimização de **KV-Cache**.
-- 🚀 **Diferenciais & Métricas:** Treinamento em dataset aberto com visualização do decaimento de *Cross-Entropy Loss* e telemetria de gradientes rastreada via **MLflow**.
-- 🛠️ **Stack Tecnológica:** `Python 3.12` `PyTorch` `Transformers` `MLflow` `NumPy`
+- 🎯 **Problema de Engenharia:** Domínio completo da matemática interna das redes neurais de atenção generativa sem abstrações prontas de bibliotecas de alto nível.
+- ⚙️ **Arquitetura & Algoritmos:**
+  - **Arquitetura Transformer Decoder-Only Artesanal**: Multi-Head Causal Self-Attention com máscara triangular causal inferior, projeções lineares $Q, K, V$, conexões residuais, LayerNorm e MLP com ativação não linear.
+  - **Amostragem Avançada**: Implementação nativa de **Top-$P$ (Nucleus Sampling)**, **Top-$K$**, **Temperature Scaling** e **Repetition Penalty**:
+    $$\text{Nucleus}(p) = \min \left\{ V^{(p)} \subseteq V : \sum_{i \in V^{(p)}} P(w_i \mid w_{<t}) \ge p \right\}$$
+  - **Pipeline de Treinamento**: Estimativa de perda periódica, salvamento de checkpoints e rastreamento de experimentos via MLflow.
+- 🚀 **Diferenciais & Métricas:** Suíte de 21 testes unitários rodando hermeticamente em CPU em menos de 2 segundos.
+- 🧪 **Teste Hermético:** `docker run --rm -v $(pwd):/workspace -w /workspace -e PYTHONPATH=/workspace portfolio-spec-engine:test pytest tests -v --cov=app`
 
 ---
 
@@ -217,18 +357,23 @@ graph TD
 
 #### 5.1 [**`llm-bedrock-emulator`**](https://github.com/cayoesn/llm-bedrock-emulator)
 > **Emulador Completo de Alta Fidelidade dos 12 Pilares Corporativos do AWS Bedrock**
+> 
+> [![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+> [![Tests](https://img.shields.io/badge/Tests-52%20Passed-success?style=flat-square)](https://github.com/cayoesn/llm-bedrock-emulator)
+> [![Coverage](https://img.shields.io/badge/Coverage-93%25-blue?style=flat-square)](https://github.com/cayoesn/llm-bedrock-emulator)
+> [![Cloud](https://img.shields.io/badge/Cloud-AWS%20Bedrock%20Parity-FF9900?style=flat-square&logo=amazon-aws&logoColor=white)](https://github.com/cayoesn/llm-bedrock-emulator)
 
-- 🎯 **Desafio de Engenharia:** Desenvolver, testar e homologar aplicações empresariais corporativas aderentes à AWS Bedrock sem incorrer em custos recorrentes de nuvem pública ou expor dados confidenciais a ambientes externos em fase de staging.
-- ⚙️ **Arquitetura & Algoritmos:** Emulador open-source de padrão industrial reproduzindo com paridade estrita os 12 pilares do AWS Bedrock:
-  1. **Agentes ReAct com Supervisor**: Coordenação autônoma com orquestração multi-especialista.
-  2. **Human-in-the-Loop (HITL) Review Gate**: Interrupção assíncrona $\mathcal{O}(1)$ para aprovação humana em ações financeiras e sensíveis.
-  3. **Knowledge Bases (KBR)**: Chunking hierárquico Pai-Filho e busca híbrida com re-ranking via **FlashRank ONNX** em $\mathcal{O}(M \log K)$.
-  4. **Bedrock Guardrails**: Anonimização reversível de PII em $\mathcal{O}(1)$, interceptador de prompt injection e aferição de fidelidade contextual.
-  5. **Code Interpreter Sandboxed**: Microsserviço hermético em container isolado (256MB) com timeout rigoroso.
-  6. **Prompt Flows Declarativos (DAG)**: Engine de fluxo resolvido por ordenação topológica com o **Algoritmo de Kahn** em $\mathcal{O}(V + E)$ com detecção imediata de ciclos.
-  7. **Gateway de Inferência Resiliente**: Fallback em cascata com gerador sintético offline, Circuit Breaker e controle hierárquico de cotas (**Token Bucket RPM e TPM**) disparando `ThrottlingException`.
-- 🚀 **Diferenciais & Métricas:** Suíte automatizada com dezenas de testes (unitários, integração e limites) aprovados; paridade total com SDKs Boto3/AWS.
-- 🛠️ **Stack Tecnológica:** `Python 3.12` `AWS Bedrock Parity` `FastAPI` `LangGraph` `Qdrant` `Ollama` `OpenTelemetry` `Prometheus` `Docker Compose`
+- 🎯 **Problema de Engenharia:** Desenvolver e homologar sistemas empresariais aderentes à AWS sem custos de nuvem pública em staging e sem expor dados confidenciais a terceiros.
+- ⚙️ **Arquitetura & Algoritmos:** Emulador open-source com paridade com os 12 pilares corporativos da AWS:
+  1. **Agentes ReAct com Supervisor**: Orquestração multi-especialista cooperativa.
+  2. **Human-in-the-Loop (HITL) Gate**: Interrupção assíncrona $\mathcal{O}(1)$ para aprovação humana em ações financeiras e críticas.
+  3. **Knowledge Bases (KBR)**: Chunking Pai-Filho e busca híbrida com re-ranking via **FlashRank ONNX** em $\mathcal{O}(M \log K)$.
+  4. **Bedrock Guardrails**: Anonimização reversível de PII em $\mathcal{O}(1)$ e detector de prompt injection.
+  5. **Code Interpreter Sandboxed**: Container hermético isolado (256MB) com timeout rigoroso.
+  6. **Prompt Flows Declarativos (DAG)**: Resolução topológica com **Algoritmo de Kahn $\mathcal{O}(V + E)$** e detecção de ciclos.
+  7. **Gateway Resiliente**: Fallback em cascata, Circuit Breaker e cotas hierárquicas (**Token Bucket RPM/TPM**).
+- 🚀 **Diferenciais & Métricas:** 52 testes automatizados aprovados; compatibilidade com SDKs Boto3/AWS.
+- 🧪 **Teste Hermético:** `docker run --rm -v $(pwd):/workspace -w /workspace -e PYTHONPATH=/workspace portfolio-spec-engine:test pytest tests -v`
 
 ---
 
@@ -238,31 +383,32 @@ graph TD
 
 #### 6.1 [**`llm-vertex-enterprise-engine`**](https://github.com/cayoesn/llm-vertex-enterprise-engine)
 > **Motor Corporativo Nativo dos 18 Pilares e 4 Superpoderes do Google Cloud Vertex AI**
+> 
+> [![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+> [![Tests](https://img.shields.io/badge/Tests-55%20Passed-success?style=flat-square)](https://github.com/cayoesn/llm-vertex-enterprise-engine)
+> [![Coverage](https://img.shields.io/badge/Coverage-88%25-blue?style=flat-square)](https://github.com/cayoesn/llm-vertex-enterprise-engine)
+> [![Cloud](https://img.shields.io/badge/Cloud-GCP%20Vertex%20AI-4285F4?style=flat-square&logo=google-cloud&logoColor=white)](https://github.com/cayoesn/llm-vertex-enterprise-engine)
 
-- 🎯 **Desafio de Engenharia:** Projetar uma infraestrutura de IA Generativa corporativa de altíssimo desempenho, aderente aos padrões de convenção da GCP e do Vertex AI, reduzindo drasticamente custos de inferência em escala, impondo segurança estrita de código e habilitando orquestração multi-agente de nível Staff.
-- ⚙️ **Arquitetura & Algoritmos:** Plataforma corporativa completa implementando nativamente os 18 pilares do ecossistema Google Cloud Vertex AI:
+- 🎯 **Problema de Engenharia:** Construir infraestrutura de IA corporativa de altíssimo desempenho aderente aos padrões da GCP, reduzindo drasticamente custos e latência de inferência em escala com segurança estrita.
+- ⚙️ **Arquitetura & Algoritmos:** Implementação nativa dos 18 pilares e 4 superpoderes exclusivos do Vertex AI:
   - ⚡ **Os 4 Superpoderes Exclusivos do Vertex AI:**
-    1. **Context Caching com TTL e ROI Calculator:** Redução comprovada de até **75% nos custos de inferência** e até **80% no Time-to-First-Token (TTFT)**, com gerenciamento programático de ciclo de vida e descarte sob Unix epoch.
-    2. **Controlled Generation com CFG e Pydantic v2:** Imposição forçada de gramática livre de contexto (*Context-Free Grammar*) em nível de amostragem de tokens.
-    3. **Multimodal Timestamp Grounding:** Ingestão unificada de mídia audiovisual temporalizada gerando marcadores indexáveis no formato `[mm:ss - mm:ss]`.
-    4. **Vertex AI Batch Prediction Engine:** Processamento assíncrono em lote sobre arquivos JSONL com bounded concurrency via `asyncio.Semaphore`, simulação de storage Cloud Storage (`gs://`) e tolerância a falhas parciais.
+    1. **Context Caching com TTL & ROI Calculator**: Redução de até **75% nos custos de inferência** e até **80% no Time-to-First-Token (TTFT)**.
+    2. **Controlled Generation com CFG e Pydantic v2**: Imposição de gramática livre de contexto na amostragem de tokens.
+    3. **Multimodal Timestamp Grounding**: Ingestão audiovisual temporalizada gerando marcadores indexáveis `[mm:ss - mm:ss]`.
+    4. **Batch Prediction Engine Assíncrono**: Processamento massivo sobre JSONL com `asyncio.Semaphore` e tolerância a falhas parciais.
   - 🏛️ **Pilares Corporativos Integrados:**
-    - **Vertex Agent Builder Supervisor**: Roteamento multi-agente baseado em regex pré-compilada com fronteiras de palavra (`\b`) para eliminar falsos positivos.
-    - **Human Escalation Review Gate (HITL)**: Portão de revisão humana com aprovação/rejeição assíncrona $\mathcal{O}(1)$.
-    - **Vertex Reasoning Engine**: Empacotamento hermético e serialização de agentes via `cloudpickle` em $\mathcal{O}(S)$.
-    - **Vertex AI Pipelines (KFP)**: Orquestrador de DAG baseado no **Algoritmo de Kahn $\mathcal{O}(V + E)$** com detecção automática de ciclos e trap de recursão.
-    - **BigQuery NL2SQL Grounding**: Tradução de linguagem natural com validação de AST via **SQLGlot**, bloqueio estrito de operações mutantes (`DROP`, `DELETE`, `INSERT`, `UPDATE`) e estimativa de bytes escaneados em dry-run seguro.
-    - **Vertex Datastore RAG**: Chunking hierárquico Pai-Filho acoplado a **ScaNN (Score Anisotropic Vector Quantization) $\mathcal{O}(K \log N)$** e Semantic Ranker.
-    - **Google Search Dynamic Grounding**: Ativação inteligente de busca factual quando o limiar de confiança do modelo é inferior ao configurado.
-    - **Google Model Armor & Reversible PII Vault**: Defesa contra injeção de prompt e anonimização reversível de dados pessoais em passe único $\mathcal{O}(L)$.
-    - **Rate Limiting Hierárquico**: Token Bucket duplo (RPM e TPM) $\mathcal{O}(1)$ com rollback atômico de reserva para prevenir vazamento de cotas.
-    - **AutoSxS Tournament Engine**: Torneio cego com Gemini-as-a-Judge, despacho concorrente via `asyncio.gather` e validação de significância estatística pelo teste Qui-Quadrado ($\chi^2$).
-- 🚀 **Diferenciais & Métricas:** 55 testes automatizados (unitários, integração, agênticos e limites) com **100% de aprovação**, **88% de cobertura de código**, tipagem estática rigorosa no **Mypy Strict** e conformidade estrita no **Ruff**.
-- 🛠️ **Stack Tecnológica:** `Python 3.12` `Google Cloud Vertex AI` `Gemini 1.5 Pro/Flash` `FastAPI` `Pydantic v2` `Kubeflow Pipelines (KFP)` `BigQuery` `ScaNN` `OpenTelemetry` `Prometheus` `Docker Compose`
+    - **Vertex Reasoning Engine**: Serialização de agentes via `cloudpickle` em $\mathcal{O}(S)$.
+    - **Vertex AI Pipelines (KFP)**: Orquestrador de DAG via **Algoritmo de Kahn $\mathcal{O}(V + E)$** com armadilha de recursão.
+    - **BigQuery NL2SQL Grounding**: Validação de AST via **SQLGlot**, bloqueio de mutações e estimativa de bytes escaneados em dry-run.
+    - **Vertex Datastore RAG**: Chunking Pai-Filho integrado a **ScaNN (Score Anisotropic Vector Quantization) $\mathcal{O}(K \log N)$**.
+    - **Google Model Armor**: Defesa contra injeções e anonimização reversível de PII em passe único $\mathcal{O}(L)$.
+    - **AutoSxS Tournament Engine**: Torneio cego com Gemini-as-a-Judge e teste Qui-Quadrado ($\chi^2$).
+- 🚀 **Diferenciais & Métricas:** 55 testes automatizados aprovados (88% de cobertura) e tipagem estática no Mypy Strict.
+- 🧪 **Teste Hermético:** `docker run --rm -v $(pwd):/workspace -w /workspace -e PYTHONPATH=/workspace portfolio-spec-engine:test pytest tests -v`
 
 ---
 
-## 🛠️ Matriz Geral de Tecnologias & Domínios de Domínio
+## 🛠️ Matriz Geral de Competências & Domínios Corporativos
 
 | Domínio de Engenharia | Tecnologias, Frameworks e Protocolos Dominados |
 | :--- | :--- |
@@ -276,5 +422,5 @@ graph TD
 ---
 
 <div align="center">
-  <sub>Construído com excelência técnica, rigor algorítmico e foco em produção por <b>Cayo Eduardo</b>.</sub>
+  <sub>Construído com excelência técnica, rigor algorítmico e padrão Staff / Principal por <b>Cayo Eduardo</b>.</sub>
 </div>
