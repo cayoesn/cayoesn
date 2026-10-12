@@ -93,7 +93,7 @@ graph TD
 ---
 
 #### 1.1 [**`llm-sales-agent`**](https://github.com/cayoesn/llm-sales-agent)
-> **Agente Conversacional de Vendas com Grafo de Conhecimento e FSM Estrita**
+> **Agente Conversacional Especialista em Vendas com Grafo de Conhecimento e FSM Estrita**
 
 - 🎯 **O que o projeto faz:** Conduz conversas de vendas complexas do início ao fim (prospecção, qualificação, apresentação de propostas, contorno de objeções e fechamento), garantindo cumprimento de regras de alçada comercial sem que o modelo invente descontos ou desvie do funil.
 - ⚙️ **Arquitetura & Como Funciona:**
@@ -268,7 +268,7 @@ graph TD
 
 - 🎯 **O que o projeto faz:** Emula os principais serviços corporativos de IA generativa da Amazon Web Services (AWS Bedrock) em ambiente local ou hermético, facilitando testes sem custo de nuvem e sem tráfego de dados sensíveis na internet.
 - ⚙️ **Arquitetura & Como Funciona:**
-  - **Agentes ReAct e Aprovação Humana (HITL)**: Orquestra múltiplos agentes cooperativos e permite pausas para aprovação de operadores antes da execução de comandos sensíveis.
+  - **Agentes ReAct e Aprovação Humana (HITL)**: Orquestra múltiplos agentes especialistas e permite pausas para aprovação de operadores antes da execução de comandos sensíveis.
   - **Knowledge Bases (KBR)**: Implementa divisão hierárquica pai-filho de documentos e busca vetorial com re-ranking via modelos locais ONNX.
   - **Execução Segura de Código (Code Interpreter)**: Roda trechos de código gerados pelo modelo dentro de sandboxes isolados com controle estrito de memória e tempo.
   - **Prompt Flows em Grafo (DAG)**: Resolve fluxos de instruções interdependentes com detecção e bloqueio de dependências circulares.
