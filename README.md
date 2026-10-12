@@ -78,6 +78,43 @@ graph TD
 - **Solução & Algoritmo:** Servidor de referência do **Model Context Protocol (MCP)** da Anthropic/Linux Foundation cobrindo 100% da especificação (Tools com geração dinâmica de JSON Schema, Resources com regex templates e subscriptions, Prompts dinâmicos, Sampling / LLM Inversion e Roots boundaries) com transporte duplo (**Stdio** e **FastAPI SSE**) e observabilidade de ponta a ponta (**OpenTelemetry**, **Prometheus** e JSON estruturado).
 - **Stack Tecnológica:** `Python 3.12` `Model Context Protocol` `FastAPI SSE` `OpenTelemetry` `Prometheus` `Pydantic v2` `Docker`
 
+```mermaid
+graph TD
+    subgraph "Clientes MCP"
+        Desktop[Claude Desktop / CLI Agent]
+        Remote[AI Microservice / Web Client]
+    end
+
+    subgraph "Camada de Transporte"
+        Stdio[Stdio Transport<br/>sys.stdin / sys.stdout]
+        SSE[FastAPI SSE Transport<br/>/sse + /messages]
+    end
+
+    subgraph "Engine Central MCP"
+        Dispatcher[Protocol Message Dispatcher<br/>JSON-RPC 2.0 Framing & Session Context]
+        ObsMiddleware[Observability Tracing & Metrics<br/>OpenTelemetry + Prometheus]
+    end
+
+    subgraph "Primitivas MCP (Registries)"
+        ToolsReg[Tools Registry<br/>• calculate_metrics<br/>• fetch_system_status<br/>• simulate_pipeline_task]
+        ResReg[Resources Registry<br/>• system://diagnostics<br/>• config://environment<br/>• metric://metric_name]
+        PromptReg[Prompts Registry<br/>• incident_investigation<br/>• staff_code_review]
+        RootsMgr[Roots Manager<br/>• file:/// path boundaries]
+        Sampling[Sampling Client<br/>• LLM Inversion createMessage]
+    end
+
+    Desktop --> Stdio
+    Remote --> SSE
+    Stdio --> Dispatcher
+    SSE --> Dispatcher
+    Dispatcher --> ObsMiddleware
+    ObsMiddleware --> ToolsReg
+    ObsMiddleware --> ResReg
+    ObsMiddleware --> PromptReg
+    ObsMiddleware --> RootsMgr
+    ObsMiddleware --> Sampling
+```
+
 ---
 
 ### 🔍 2. RAG Avançado, Memória Cognitiva & Roteamento
