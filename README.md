@@ -16,16 +16,17 @@
 
 Sou engenheiro de software com foco na construção, integração e otimização de **sistemas baseados em LLMs, Redes Neurais e LLMOps**.
 
-Este portfólio reúne **15 ecossistemas completos e independentes**, desenvolvidos do zero para solucionar os principais desafios práticos no uso de IA:
+Este portfólio reúne **16 ecossistemas completos e independentes**, desenvolvidos do zero para solucionar os principais desafios práticos no uso de IA:
 - **Orquestração Multi-Agente & Protocolos Concorrentes**: Máquinas de estados finitos (FSM), leilões FIPA distribuídos, grafos acíclicos dirigidos (DAGs) com execução em ondas paralelas e conformidade estrita com o Model Context Protocol (MCP).
 - **RAG de Alta Precisão & Memória Cognitiva**: Recuperação em dois estágios com HyDE, Re-Ranking contextual por Cross-Encoder, Reciprocal Rank Fusion (RRF), Top-K via Min-Heaps O(N log K) e decaimento temporal contínuo via Curva de Esquecimento de Ebbinghaus.
 - **Segurança Factual, Moderação & Guardrails**: Filtros de injeção direta e indireta de prompt, classificação de risco Llama-Guard 3, anonimização reversível de PII em passe único O(|T|) e sandboxes herméticos.
 - **Plataformas de Nuvem Enterprise**: Emulação de padrão industrial e motores nativos de altíssima fidelidade para **AWS Bedrock** (12 pilares) e **Google Cloud Vertex AI** (18 pilares e 4 superpoderes exclusivos).
+- **Decisão Neural System-1 Não-Autoregressiva & Calibração**: Inferência de passe único em menos de 5 milissegundos com zero tokens de saída faturados, primitivas estruturadas (`choice`, `noul`, `score`), calibração pós-hoc RLCD e avaliação inline de RAG (`JevEval`).
 - **Avaliação Estatística, Síntese de Dados & Deep Learning**: Decomposição atômica de declarações (Atomic Claim Decomposition), consistência inter-juízes via Cohen's Kappa, desduplicação sub-quadrática MinHash LSH O(N * K) e implementação de Transformers com Causal Self-Attention e amostragem Nucleus (Top-P) em PyTorch.
 
 ---
 
-## 📋 Tabela Geral dos 15 Projetos do Ecossistema
+## 📋 Tabela Geral dos 16 Projetos do Ecossistema
 
 | # | Repositório | Domínio Arquitetural | Algoritmo / Estrutura Chave | Stack Principal |
 | :---: | :--- | :--- | :--- | :--- |
@@ -44,18 +45,20 @@ Este portfólio reúne **15 ecossistemas completos e independentes**, desenvolvi
 | **13** | [**`llm-create-model`**](#43-llm-create-model) | Redes Neurais & Pré-Treinamento | Transformer Decoder-Only, Causal Attention & Top-P | PyTorch, RMSNorm, MLflow, FastAPI |
 | **14** | [**`llm-bedrock-emulator`**](#51-llm-bedrock-emulator) | Plataforma de Nuvem (AWS) | 12 Pilares Bedrock: KBR, HITL, Sandboxed Code, DAG Kahn | FastAPI, LangGraph, Qdrant, Ollama |
 | **15** | [**`llm-vertex-enterprise-engine`**](#61-llm-vertex-enterprise-engine) | Plataforma de Nuvem (GCP) | 18 Pilares & 4 Superpoderes: Context Caching, CFG, ScaNN | Vertex AI, Gemini 1.5, KFP, BigQuery |
+| **16** | [**`llm-jev-engine`**](#71-llm-jev-engine) | Decisão Neural System-1 & Calibração | Primitivas Choice/Noul/Score, Calibração RLCD & JevEval | NumPy SIMD, FastAPI, Pydantic v2, Prometheus |
 
 ---
 
 ## 🏛️ Topologia do Ecossistema Corporativo de IA
 
-O diagrama abaixo ilustra como esses 15 subsistemas se integram para compor uma plataforma corporativa completa de Inteligência Artificial:
+O diagrama abaixo ilustra como esses 16 subsistemas se integram para compor uma plataforma corporativa completa de Inteligência Artificial:
 
 ```mermaid
 graph TD
     Client([👤 Consumidor de API / Aplicação]) --> LLMOpsGateway[🏆 09. llm-llmops<br/>Unified Gateway & Quality Gates]
     LLMOpsGateway --> Guardrails[🛡️ 10. llm-guardrails-proxy<br/>Llama-Guard + Single-Pass PII Vault]
     Guardrails --> Router[🔀 08. llm-semantic-router<br/>Cascade Selector + LRU Semantic Cache]
+    Router --> JevEngine[⚡ 16. llm-jev-engine<br/>System-1 Decision Primitives + RLCD Calibration]
     
     subgraph "Core Agent Runtime, Protocols & Memory"
         Router --> SalesAgent[🤖 01. llm-sales-agent<br/>LangGraph + PPR Graph-RAG + FSM]
@@ -84,7 +87,7 @@ graph TD
 
 ---
 
-## 💎 Apresentação Detalhada dos 15 Projetos por Domínio
+## 💎 Apresentação Detalhada dos 16 Projetos por Domínio
 
 ---
 
@@ -97,7 +100,7 @@ graph TD
 
 - 🎯 **O que o projeto faz:** Conduz conversas de vendas complexas do início ao fim (prospecção, qualificação, apresentação de propostas, contorno de objeções e fechamento), garantindo cumprimento de regras de alçada comercial sem que o modelo invente descontos ou desvie do funil.
 - ⚙️ **Arquitetura & Como Funciona:**
-  - **FSM com Decisão de Desconto Orientada a Utilidade**: Controla a transição de estados de negociação (*Prospecção $\to$ Descoberta $\to$ Proposta $\to$ Objeções $\to$ Fechamento*). Em fases de contraproposta, calcula a chance de fechamento do cliente versus o impacto na margem da empresa, evitando concessões desnecessárias.
+  - **FSM com Decisão de Desconto Orientada a Utilidade**: Controla a transição de estados de negociação (*Prospecção → Descoberta → Proposta → Objeções → Fechamento*). Em fases de contraproposta, calcula a chance de fechamento do cliente versus o impacto na margem da empresa, evitando concessões desnecessárias.
   - **Graph-RAG com Personalized PageRank (PPR)**: Utiliza grafo de produtos em NetworkX com passeios aleatórios e reinício para identificar os itens complementares mais relevantes a partir do catálogo corporativo.
   - **Memória Episódica do Cliente**: Armazena e recupera continuamente o histórico e perfil do cliente através do **Mem0** com persistência vetorial no **Qdrant**.
 - 🛠️ **Stack Tecnológica:** Python 3.12, LangGraph, Qdrant, Mem0, NetworkX, FastAPI, Pydantic v2.
@@ -295,11 +298,33 @@ graph TD
 
 ---
 
+### ⚡ 7. Decisão Neural System-1 Não-Autoregressiva & Calibração Estatística
+
+---
+
+#### 7.1 [**`llm-jev-engine`**](https://github.com/cayoesn/llm-jev-engine)
+> **Motor de Decisão Neural System-1 Não-Autoregressivo de Passe Único com Calibração RLCD & JevEval**
+
+- 🎯 **O que o projeto faz:** Substitui chamadas lentas e caras a LLMs generativos (System-2) em tarefas de roteamento, classificação, verificação factual e pontuação por um motor de decisão neural não-autoregressivo de passe único (System-1) inspirado na arquitetura Jev (`jev.dev`), entregando distribuições de probabilidade calibradas em menos de 5 milissegundos com zero tokens de saída faturados.
+- ⚙️ **Arquitetura & Como Funciona:**
+  - **Três Primitivas Nativas de Passe Único (`choice`, `noul`, `score`)**: Executa seleção multiclasse de 2 a 255 opções (`choice`), verificação proposicional binária com intervalo de credibilidade de Wilson a 95% (`noul`) e avaliação ordinal contínua de rubricas de 2 a 10 níveis com valor esperado e variância (`score`), eliminando falhas de formatação JSON e geração autoregressiva de tokens.
+  - **Calibração Estatística Pós-Hoc RLCD**: Ajusta logits brutos por escalonamento de temperatura numericamente estável e escalonamento logístico de Platt, otimizando Expected Calibration Error (ECE), Brier Score e Negative Log-Likelihood via busca de seção áurea vetorizada em NumPy SIMD/BLAS.
+  - **Amostragem Paralela de Estado Compartilhado & Portão de Confiança**: Codifica o estado de entrada uma única vez e avalia múltiplas perguntas concorrentemente via `asyncio.gather` com cache LRU O(1), roteando cada decisão por limiares determinísticos de confiança (`AUTO_EXECUTE`, `FALLBACK_SYSTEM2` ou `ESCALATE_HITL`) e registrando auditoria criptográfica encadeada por HMAC-SHA256.
+  - **Os 4 Fluxos Corporativos Reais & Ganhos Quantificados**:
+    1. *AI Gateway & Roteamento em Cascata Hot-Path*: Avalia rota computacional, segurança anti-jailbreak e complexidade analítica em menos de 3 milissegundos, defletindo entre 65% e 80% do tráfego trivial ou adversarial antes de acionar LLMs de fronteira (ganho de velocidade superior a 340 vezes).
+    2. *Triagem de Tickets de CRM & Suporte com Automação Governada por Confiança*: Classifica fila de atendimento, urgência de SLA, presença de bug técnico e nível de frustração do cliente em um único passe compartilhado, reduzindo em 70% o consumo de tokens de entrada e eliminando 100% dos tokens de saída.
+    3. *`JevEval` — Juiz Inline Anti-Alucinação em Produção para Pipelines RAG*: Substitui o paradigma lento de LLM-as-a-Judge offline por verificação inline em tempo real (menos de 3 milissegundos) de fidelidade ao contexto, conformidade de políticas e qualidade da resposta antes da entrega ao usuário final.
+    4. *Motor de Benchmark FinOps de Saída Não-Tarifada (Unmetered-Output)*: Simula e audita em tempo real a economia financeira e computacional em escala corporativa, demonstrando redução líquida superior a 99% nos custos mensais de inferência em comparação a modelos generativos System-2.
+- 🛠️ **Stack Tecnológica:** Python 3.12, FastAPI, NumPy BLAS/SIMD, Pydantic v2, AsyncIO, Prometheus, Langfuse, Docker.
+
+---
+
 ## 🛠️ Matriz Geral de Competências & Domínios Corporativos
 
 | Domínio de Engenharia | Tecnologias, Frameworks e Protocolos Dominados |
 | :--- | :--- |
 | **Plataformas de Nuvem Enterprise** | Google Cloud Vertex AI, AWS Bedrock, Kubeflow Pipelines (KFP), BigQuery NL2SQL, Cloud Storage (`gs://`), Google Model Armor |
+| **Decisão System-1 & Calibração** | Inferência Não-Autoregressiva de Passe Único (Jev), Primitivas Choice/Noul/Score, Calibração RLCD (ECE/Brier/Platt), JevEval Inline RAG |
 | **Frameworks de Agentes & Protocolos** | Model Context Protocol (MCP), Google Antigravity (AGY) SDK, LangGraph, FIPA Contract Net Protocol, ReAct, W3C CloudEvents |
 | **Bancos Vetoriais & Motores de Busca** | ScaNN (MIPS), Qdrant, PostgreSQL (pgvector), Redis (Semantic Cache), HyDE, FlashRank ONNX, Cross-Encoders |
 | **Segurança, Moderação & Guardrails** | Google Model Armor, Llama-Guard 3, Sanitizador Criptográfico Reversível de PII, gVisor Code Execution Sandbox, Anti-Jailbreak |
