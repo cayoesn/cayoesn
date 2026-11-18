@@ -16,17 +16,18 @@
 
 Sou engenheiro de software com foco na construção, integração e otimização de **sistemas baseados em LLMs, Redes Neurais e LLMOps**.
 
-Este portfólio reúne **16 ecossistemas completos e independentes**, desenvolvidos do zero para solucionar os principais desafios práticos no uso de IA:
+Este portfólio reúne **17 ecossistemas completos e independentes**, desenvolvidos do zero para solucionar os principais desafios práticos no uso de IA:
 - **Orquestração Multi-Agente & Protocolos Concorrentes**: Máquinas de estados finitos (FSM), leilões FIPA distribuídos, grafos acíclicos dirigidos (DAGs) com execução em ondas paralelas e conformidade estrita com o Model Context Protocol (MCP).
 - **RAG de Alta Precisão & Memória Cognitiva**: Recuperação em dois estágios com HyDE, Re-Ranking contextual por Cross-Encoder, Reciprocal Rank Fusion (RRF), Top-K via Min-Heaps O(N log K) e decaimento temporal contínuo via Curva de Esquecimento de Ebbinghaus.
 - **Segurança Factual, Moderação & Guardrails**: Filtros de injeção direta e indireta de prompt, classificação de risco Llama-Guard 3, anonimização reversível de PII em passe único O(|T|) e sandboxes herméticos.
 - **Plataformas de Nuvem Enterprise**: Emulação de padrão industrial e motores nativos de altíssima fidelidade para **AWS Bedrock** (12 pilares) e **Google Cloud Vertex AI** (18 pilares e 4 superpoderes exclusivos).
 - **Decisão Neural System-1 Não-Autoregressiva & Calibração**: Inferência de passe único em menos de 5 milissegundos com zero tokens de saída faturados, primitivas estruturadas (`choice`, `noul`, `score`), calibração pós-hoc RLCD e avaliação inline de RAG (`JevEval`).
+- **MLOps Nível 2 & LLMOps Multimodal Open-Source**: Governança completa do ciclo de vida preditivo e generativo unificando **Feast Feature Store**, **DVC/CML**, **MLflow**, **Apache Airflow**, **Kubeflow**, **Whisper ASR**, **ONNX Runtime** e fusão concorrente de **Texto, Áudio, Imagem e Vídeo** com detecção de sinergia multimodal, retreino automático contra desvios estatísticos (*drift*) e governança FinOps/LGPD.
 - **Avaliação Estatística, Síntese de Dados & Deep Learning**: Decomposição atômica de declarações (Atomic Claim Decomposition), consistência inter-juízes via Cohen's Kappa, desduplicação sub-quadrática MinHash LSH O(N * K) e implementação de Transformers com Causal Self-Attention e amostragem Nucleus (Top-P) em PyTorch.
 
 ---
 
-## 📋 Tabela Geral dos 16 Projetos do Ecossistema
+## 📋 Tabela Geral dos 17 Projetos do Ecossistema
 
 | # | Repositório | Domínio Arquitetural | Algoritmo / Estrutura Chave | Stack Principal |
 | :---: | :--- | :--- | :--- | :--- |
@@ -46,12 +47,13 @@ Este portfólio reúne **16 ecossistemas completos e independentes**, desenvolvi
 | **14** | [**`llm-bedrock-emulator`**](#51-llm-bedrock-emulator) | Plataforma de Nuvem (AWS) | 12 Pilares Bedrock: KBR, HITL, Sandboxed Code, DAG Kahn | FastAPI, LangGraph, Qdrant, Ollama |
 | **15** | [**`llm-vertex-enterprise-engine`**](#61-llm-vertex-enterprise-engine) | Plataforma de Nuvem (GCP) | 18 Pilares & 4 Superpoderes: Context Caching, CFG, ScaNN | Vertex AI, Gemini 1.5, KFP, BigQuery |
 | **16** | [**`llm-jev-engine`**](#71-llm-jev-engine) | Decisão Neural System-1 & Calibração | Primitivas Choice/Noul/Score, Calibração RLCD & JevEval | NumPy SIMD, FastAPI, Pydantic v2, Prometheus |
+| **17** | [**`llm-mlops-multimodal-platform`**](#81-llm-mlops-multimodal-platform) | MLOps Nível 2 & LLMOps Multimodal | Feast PIT Join O(Q log M), Drift PSI/KS, LoRA & Fusão Áudio/Vídeo/ONNX | Feast, DVC/CML, MLflow, Airflow, Whisper, ONNX |
 
 ---
 
 ## 🏛️ Topologia do Ecossistema Corporativo de IA
 
-O diagrama abaixo ilustra como esses 16 subsistemas se integram para compor uma plataforma corporativa completa de Inteligência Artificial:
+O diagrama abaixo ilustra como esses 17 subsistemas se integram para compor uma plataforma corporativa completa de Inteligência Artificial:
 
 ```mermaid
 graph TD
@@ -71,9 +73,10 @@ graph TD
         SalesAgent --> RAG[🔍 06. llm-rag<br/>Heap Top-K + RRF + Cross-Encoder]
     end
 
-    subgraph "Cloud Platforms & Enterprise Engines"
+    subgraph "Cloud Platforms, MLOps Level-2 & Multimodal Engines"
         Router --> BedrockEmulator[☁️ 14. llm-bedrock-emulator<br/>Full AWS Bedrock Stack + ReAct Multi-Agent]
         Router --> VertexEngine[🌐 15. llm-vertex-enterprise-engine<br/>Full GCP Vertex AI Stack + Context Caching]
+        Router --> OmniPulse[🎙️ 17. llm-mlops-multimodal-platform<br/>MLOps Level-2 + Multimodal Audio/Video/Vision LLMOps]
     end
 
     subgraph "Offline Evaluation & Synthetic Data"
@@ -87,7 +90,7 @@ graph TD
 
 ---
 
-## 💎 Apresentação Detalhada dos 16 Projetos por Domínio
+## 💎 Apresentação Detalhada dos 17 Projetos por Domínio
 
 ---
 
@@ -319,10 +322,31 @@ graph TD
 
 ---
 
+### 🎙️ 8. MLOps Nível 2 & LLMOps Multimodal Open-Source (Áudio, Vídeo, Imagem & Texto)
+
+---
+
+#### 8.1 [**`llm-mlops-multimodal-platform`**](https://github.com/cayoesn/llm-mlops-multimodal-platform)
+> **Plataforma Corporativa Unificada OmniPulse AI — MLOps Nível 2, LLMOps Open-Source e Fusão Multimodal (Texto, Áudio, Imagem e Vídeo)**
+
+- 🎯 **O que o projeto faz:** Unifica em uma única plataforma corporativa de risco omnichannel, copiloto de políticas e inspeção automatizada de disputas os três estágios mais avançados da engenharia de operações de IA — **MLOps Clássico Nível 2**, **LLMOps Textual Auto-Hospedado** e **LLMOps Multimodal sincronizado em Texto, Áudio, Imagem e Vídeo** — operando exclusivamente com ferramentas open-source de padrão industrial, observabilidade tridimensional, governança de privacidade LGPD/GDPR e controle contínuo de retorno sobre investimento (FinOps).
+- ⚙️ **Arquitetura & Como Funciona:**
+  - **Pilar 1 — MLOps Clássico Nível 2 com Feast, DVC/CML, MLflow, Airflow e Kubeflow**: Gerencia variáveis em camada dupla via **Feast Feature Store** (*Offline Apache Parquet* com junções temporais point-in-time O(Q log M) por busca binária que eliminam vazamento de dados futuros e desvios entre treino e produção, somado ao *Online Store* em **Redis** com leitura O(1)). Versiona dados e pipelines declarativos via **DVC** (`dvc.yaml` e `params.yaml`) gerando relatórios comparativos **CML** para Pull Requests, registra experimentos e artefatos ONNX no **MLflow** com portões de qualidade (`Staging`, `Production`, `Archived`) e roteamento A/B Champion/Challenger, orquestra rotinas em **Apache Airflow** e **Kubeflow Pipelines**, e monitora *Data Drift* (PSI e teste Kolmogorov-Smirnov) e *Concept Drift* acionando retreinamento e promoção automática em malha fechada.
+  - **Pilar 2 — LLMOps Textual Open-Source com Qdrant, Ollama/vLLM, RAGAS e LoRA/RLHF**: Implementa registro versionado de prompts e planejador de particionamento de checkpoints quantizados (`FP16`, `INT8` e `INT4`), cache semântico em dois níveis (LRU exato O(1) + similaridade de cosseno vetorizada BLAS), cofre reversível de PII em passe único O(|T|) aliado a bloqueio anti-jailbreak e filtro de toxicidade, busca híbrida densa e lexical por Reciprocal Rank Fusion no **Qdrant** com seleção Top-K O(N log K), avaliação semântica inline **RAGAS** (*Faithfulness*, *Contextual Relevance*, *Contextual Precision* e *Answer Relevance*) e ciclo contínuo de adaptação eficiente por matrizes de posto baixo (**LoRA**) guiadas por pares de preferência humana (**RLHF/DPO**).
+  - **Pilar 3 — LLMOps Multimodal Concorrente em Áudio, Imagem, Vídeo e Texto**: Executa ingestão e inferência paralela não-bloqueante via `asyncio.gather` combinando:
+    1. *Pipeline Acústico (Audio MLOps)*: Redução espectral de ruído via FFT, normalização RMS, detecção de atividade de voz (VAD), cálculo de relação sinal-ruído (SNR em decibéis), transcrição open-source **Whisper** com medição de latência por elocução, cálculo de taxa de erro de palavras (WER) em espaço ótimo por programação dinâmica e anonimização biométrica de timbre vocal mediante token criptográfico de consentimento LGPD.
+    2. *Pipeline de Visão e Vídeo em Borda (Vision & Video MLOps)*: Proteção pré-decodificação contra bombas de descompressão de imagem, extração inteligente de *keyframes* de vídeo combinando amostragem temporal uniforme e picos de mudança de cena L1, inferência acelerada real via **ONNX Runtime** com perfilamento de quantização INT8, avaliação de detecção por IoU/mAP e detector de *Visual Data Drift* por divergência de Jensen-Shannon em histogramas RGB e nitidez Laplaciana.
+    3. *Fusão Cross-Modal & Sinergia*: Projeta as quatro modalidades em espaço semântico normalizado compartilhado, calcula a matriz de sinergia multimodal para detectar contradições entre o relato falado/escrito e as evidências visuais em foto/vídeo, avalia **Multimodal RAGAS** e transmite inferência audiovisual em tempo real via **WebSocket**.
+  - **Observabilidade 3D, Previsão de Séries Temporais, Autoscaling K8s & FinOps**: Exporta métricas unificadas de infraestrutura, serviço e qualidade estatística/semântica via **OpenTelemetry**, **Prometheus** e painéis **Grafana** com previsão linear de tendência de Holt, manifestos **Kubernetes** com **HPA** e **VPA**, esteiras CI/CD completas em **GitHub Actions**, **GitLab CI** e **Jenkins**, cadeia de auditoria imutável HMAC-SHA256 e motor FinOps que previne cenários de ROI negativo.
+- 🛠️ **Stack Tecnológica:** Python 3.12, FastAPI (REST & WebSocket), Feast, DVC & CML, MLflow, Apache Airflow, Kubeflow, ONNX Runtime, Whisper, Qdrant, Redis, Ollama/vLLM, OpenTelemetry, Prometheus, Grafana, Kubernetes (HPA/VPA), Docker Compose.
+
+---
+
 ## 🛠️ Matriz Geral de Competências & Domínios Corporativos
 
 | Domínio de Engenharia | Tecnologias, Frameworks e Protocolos Dominados |
 | :--- | :--- |
+| **MLOps Nível 2 & LLMOps Multimodal** | Feast Feature Store (Parquet & Redis PIT), DVC & CML, MLflow Registry, Apache Airflow, Whisper ASR (VAD/WER/SNR), ONNX Runtime INT8, Multimodal RAGAS |
 | **Plataformas de Nuvem Enterprise** | Google Cloud Vertex AI, AWS Bedrock, Kubeflow Pipelines (KFP), BigQuery NL2SQL, Cloud Storage (`gs://`), Google Model Armor |
 | **Decisão System-1 & Calibração** | Inferência Não-Autoregressiva de Passe Único (Jev), Primitivas Choice/Noul/Score, Calibração RLCD (ECE/Brier/Platt), JevEval Inline RAG |
 | **Frameworks de Agentes & Protocolos** | Model Context Protocol (MCP), Google Antigravity (AGY) SDK, LangGraph, FIPA Contract Net Protocol, ReAct, W3C CloudEvents |
