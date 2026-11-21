@@ -16,8 +16,8 @@
 
 I am a software engineer specializing in architecting, integrating, and optimizing **production-grade LLM systems, neural networks, MLOps, and LLMOps platforms**.
 
-This portfolio brings together **14 complete, standalone engineering ecosystems** built from the ground up to solve core production challenges in applied AI:
-- **Multi-Agent Orchestration & Distributed Protocols**: Strict finite state machines (FSMs), distributed FIPA Contract Net auctions, directed acyclic graphs (DAGs) with parallel wave execution, and cryptographically tamper-evident execution logs.
+This portfolio brings together **15 complete, standalone engineering ecosystems** built from the ground up to solve core production challenges in applied AI:
+- **Multi-Agent Orchestration & Distributed Protocols**: Strict finite state machines (FSMs), distributed FIPA Contract Net auctions, directed acyclic graphs (DAGs) with parallel wave execution, 2026 Model Context Protocol (**MCP SDK v2.3+**, **SEP-1865 `ui://` MCP Apps**, **Elicitation**, **SEP-1686 Durable Tasks**), and cryptographically tamper-evident execution logs.
 - **High-Precision RAG & Cognitive Memory**: Two-stage retrieval with HyDE, contextual cross-encoder reranking, Reciprocal Rank Fusion (RRF), O(N log K) min-heap Top-K selection, and continuous temporal memory decay modeled after the Ebbinghaus forgetting curve.
 - **Factual Safety, Moderation & Guardrails**: Direct and indirect prompt-injection defense, Llama-Guard 3 risk classification, single-pass O(|T|) reversible PII redaction, and Base64 payload inspection.
 - **Non-Autoregressive System-1 Neural Decision & Calibration**: Single-pass inference under 5 ms with zero metered output tokens, structured decision primitives (`choice`, `noul`, `score`), post-hoc RLCD calibration, and inline RAG verification (`JevEval`).
@@ -26,7 +26,7 @@ This portfolio brings together **14 complete, standalone engineering ecosystems*
 
 ---
 
-## 📋 Master Summary of the 14 Ecosystem Repositories
+## 📋 Master Summary of the 15 Ecosystem Repositories
 
 | # | Repository | Architectural Domain | Key Algorithm / Data Structure | Core Stack |
 | :---: | :--- | :--- | :--- | :--- |
@@ -34,56 +34,58 @@ This portfolio brings together **14 complete, standalone engineering ecosystems*
 | **02** | [**`llm-antigravity-orchestrator`**](#12-llm-antigravity-orchestrator) | Agent Orchestration & AGY Runtime | Immutable SHA-256 Hash Chain & Async Hooks | Google AGY SDK, Gemini 1.5, FastAPI |
 | **03** | [**`llm-a2a-protocol`**](#13-llm-a2a-protocol) | Distributed Agent-to-Agent Protocol | Multi-Attribute FIPA Contract Net Auction & TTL | FIPA ACL, Redis, CloudEvents, FastAPI |
 | **04** | [**`llm-tool-calling`**](#14-llm-tool-calling) | Structured Tool Invocation | `graphlib` Topological DAG, Parallel Waves & Fail-Fast Skip | Tool Engine, OpenTelemetry, MLflow |
-| **05** | [**`llm-rag`**](#21-llm-rag) | Dense Retrieval & Reranking | Top-K Min-Heap O(N log K), RRF, HyDE & Cross-Encoder | Qdrant, HyDE, Cross-Encoder, FastAPI |
-| **06** | [**`llm-agent-memory`**](#22-llm-agent-memory) | Temporal Cognitive Memory | Ebbinghaus Decay & SIMD NumPy MMR | Qdrant, Redis, Vectorized MMR, FastAPI |
-| **07** | [**`llm-semantic-router`**](#23-llm-semantic-router) | Cascade Router & Semantic Cache | O(1) LRU Cache with TTL & BLAS Cosine Similarity | Qdrant, Cascade Routing, FastAPI |
-| **08** | [**`llm-llmops`**](#31-llm-llmops) | Enterprise AI Gateway & LLMOps | O(1) Token Bucket, Circuit Breaker & Quality Gates | Langfuse, Token Bucket, FastAPI |
-| **09** | [**`llm-guardrails-proxy`**](#32-llm-guardrails-proxy) | Factual Safety & Moderation | Single-Pass O(\|T\|) Regex, Atomic De-Anonymizer & Llama-Guard | Llama-Guard 3, PII Vault, FastAPI |
-| **10** | [**`llm-eval-suite`**](#41-llm-eval-suite) | Offline Evaluation & LLM Judges | Atomic Claim Decomposition & Cohen's Kappa | RAGAS, DeepEval, G-Eval CoT, FastAPI |
-| **11** | [**`llm-synthetic-data`**](#42-llm-synthetic-data) | Synthetic Data & Curation | Sub-Quadratic MinHash LSH O(N * K) & Anti-Loop Filter | Evol-Instruct, MinHash LSH, QLoRA |
-| **12** | [**`llm-create-model`**](#43-llm-create-model) | Neural Networks & Pre-Training | Decoder-Only Transformer, Causal Attention & Top-P | PyTorch, RMSNorm, MLflow, FastAPI |
-| **13** | [**`llm-jev-engine`**](#51-llm-jev-engine) | System-1 Neural Decision & Calibration | Choice/Noul/Score Primitives, RLCD Calibration & JevEval | NumPy SIMD, FastAPI, Pydantic v2, Prometheus |
-| **14** | [**`llm-mlops-multimodal-platform`**](#61-llm-mlops-multimodal-platform) | Level-2 MLOps & Multimodal LLMOps | Feast PIT Join O(Q log M), PSI/KS Drift, LoRA & Audio/Video/ONNX Fusion | Feast, DVC/CML, MLflow, Airflow, Whisper, ONNX |
+| **05** | [**`llm-mcp-platform`**](#15-llm-mcp-platform) | Full-Spectrum 2026 MCP Platform | Stateless Streamable HTTP, SEP-1865 `ui://` Apps, Resolve/Elicit DAG & OAuth 2.1 CIMD | Python MCP SDK v2.3+, FastAPI, Pydantic v2 |
+| **06** | [**`llm-rag`**](#21-llm-rag) | Dense Retrieval & Reranking | Top-K Min-Heap O(N log K), RRF, HyDE & Cross-Encoder | Qdrant, HyDE, Cross-Encoder, FastAPI |
+| **07** | [**`llm-agent-memory`**](#22-llm-agent-memory) | Temporal Cognitive Memory | Ebbinghaus Decay & SIMD NumPy MMR | Qdrant, Redis, Vectorized MMR, FastAPI |
+| **08** | [**`llm-semantic-router`**](#23-llm-semantic-router) | Cascade Router & Semantic Cache | O(1) LRU Cache with TTL & BLAS Cosine Similarity | Qdrant, Cascade Routing, FastAPI |
+| **09** | [**`llm-llmops`**](#31-llm-llmops) | Enterprise AI Gateway & LLMOps | O(1) Token Bucket, Circuit Breaker & Quality Gates | Langfuse, Token Bucket, FastAPI |
+| **10** | [**`llm-guardrails-proxy`**](#32-llm-guardrails-proxy) | Factual Safety & Moderation | Single-Pass O(\|T\|) Regex, Atomic De-Anonymizer & Llama-Guard | Llama-Guard 3, PII Vault, FastAPI |
+| **11** | [**`llm-eval-suite`**](#41-llm-eval-suite) | Offline Evaluation & LLM Judges | Atomic Claim Decomposition & Cohen's Kappa | RAGAS, DeepEval, G-Eval CoT, FastAPI |
+| **12** | [**`llm-synthetic-data`**](#42-llm-synthetic-data) | Synthetic Data & Curation | Sub-Quadratic MinHash LSH O(N * K) & Anti-Loop Filter | Evol-Instruct, MinHash LSH, QLoRA |
+| **13** | [**`llm-create-model`**](#43-llm-create-model) | Neural Networks & Pre-Training | Decoder-Only Transformer, Causal Attention & Top-P | PyTorch, RMSNorm, MLflow, FastAPI |
+| **14** | [**`llm-jev-engine`**](#51-llm-jev-engine) | System-1 Neural Decision & Calibration | Choice/Noul/Score Primitives, RLCD Calibration & JevEval | NumPy SIMD, FastAPI, Pydantic v2, Prometheus |
+| **15** | [**`llm-mlops-multimodal-platform`**](#61-llm-mlops-multimodal-platform) | Level-2 MLOps & Multimodal LLMOps | Feast PIT Join O(Q log M), PSI/KS Drift, LoRA & Audio/Video/ONNX Fusion | Feast, DVC/CML, MLflow, Airflow, Whisper, ONNX |
 
 ---
 
 ## 🏛️ Enterprise AI Ecosystem Topology
 
-The diagram below illustrates how these 14 subsystems integrate to form a unified, production-ready enterprise AI platform:
+The diagram below illustrates how these 15 subsystems integrate to form a unified, production-ready enterprise AI platform:
 
 ```mermaid
 graph TD
-    Client([👤 API Consumer / Application]) --> LLMOpsGateway[🏆 08. llm-llmops<br/>Unified Gateway & Quality Gates]
-    LLMOpsGateway --> Guardrails[🛡️ 09. llm-guardrails-proxy<br/>Llama-Guard + Single-Pass PII Vault]
-    Guardrails --> Router[🔀 07. llm-semantic-router<br/>Cascade Selector + LRU Semantic Cache]
-    Router --> JevEngine[⚡ 13. llm-jev-engine<br/>System-1 Decision Primitives + RLCD Calibration]
+    Client([👤 API Consumer / Application]) --> LLMOpsGateway[🏆 09. llm-llmops<br/>Unified Gateway & Quality Gates]
+    LLMOpsGateway --> Guardrails[🛡️ 10. llm-guardrails-proxy<br/>Llama-Guard + Single-Pass PII Vault]
+    Guardrails --> Router[🔀 08. llm-semantic-router<br/>Cascade Selector + LRU Semantic Cache]
+    Router --> JevEngine[⚡ 14. llm-jev-engine<br/>System-1 Decision Primitives + RLCD Calibration]
 
     subgraph "Core Agent Runtime, Protocols & Memory"
         Router --> SalesAgent[🤖 01. llm-sales-agent<br/>LangGraph + PPR Graph-RAG + FSM]
         Router --> Orchestrator[⚡ 02. llm-antigravity-orchestrator<br/>Google AGY SDK + SHA-256 Audit Chain]
         Router --> A2A[🌐 03. llm-a2a-protocol<br/>FIPA Contract Net + Weighted Utility]
         Router --> ToolCalling[🛠️ 04. llm-tool-calling<br/>DAG Topological Sorter + Wave Parallelism]
+        Router --> MCPPlatform[🔌 05. llm-mcp-platform<br/>MCP v2.3+ + SEP-1865 Apps + OAuth 2.1 CIMD]
 
-        SalesAgent --> RAG[🔍 05. llm-rag<br/>Heap Top-K + RRF + Cross-Encoder]
-        SalesAgent --> Memory[🧠 06. llm-agent-memory<br/>Ebbinghaus Decay + SIMD MMR]
+        SalesAgent --> RAG[🔍 06. llm-rag<br/>Heap Top-K + RRF + Cross-Encoder]
+        SalesAgent --> Memory[🧠 07. llm-agent-memory<br/>Ebbinghaus Decay + SIMD MMR]
     end
 
     subgraph "MLOps Level-2 & Multimodal Engines"
-        Router --> OmniPulse[🎙️ 14. llm-mlops-multimodal-platform<br/>MLOps Level-2 + Multimodal Audio/Video/Vision LLMOps]
+        Router --> OmniPulse[🎙️ 15. llm-mlops-multimodal-platform<br/>MLOps Level-2 + Multimodal Audio/Video/Vision LLMOps]
     end
 
     subgraph "Offline Evaluation & Synthetic Data"
-        Synthetic[🧬 11. llm-synthetic-data<br/>Evol-Instruct + MinHash LSH Deduplication] --> Eval[📊 10. llm-eval-suite<br/>Atomic Claim Decomposition + Cohen's Kappa]
+        Synthetic[🧬 12. llm-synthetic-data<br/>Evol-Instruct + MinHash LSH Deduplication] --> Eval[📊 11. llm-eval-suite<br/>Atomic Claim Decomposition + Cohen's Kappa]
     end
 
     subgraph "Fundamentals & Model Pre-Training"
-        CreateModel[🧠 12. llm-create-model<br/>Decoder-Only Mini-GPT PyTorch + Top-P Sampling]
+        CreateModel[🧠 13. llm-create-model<br/>Decoder-Only Mini-GPT PyTorch + Top-P Sampling]
     end
 ```
 
 ---
 
-## 💎 Detailed Breakdown of the 14 Projects by Domain
+## 💎 Detailed Breakdown of the 15 Projects by Domain
 
 ---
 
@@ -136,6 +138,18 @@ graph TD
   - **Fail-Fast Skip Propagation**: Immediately aborts all downstream dependent tools if a required upstream tool fails, eliminating wasted compute and network round trips.
   - **Cycle Prevention**: Validates graph topology prior to execution to reject circular dependencies and infinite loops.
 - 🛠️ **Tech Stack:** Python 3.12, `graphlib`, OpenTelemetry, MLflow, FastAPI, Pydantic v2.
+
+---
+
+#### 1.5 [**`llm-mcp-platform`**](https://github.com/cayoesn/llm-mcp-platform)
+> **Full-Spectrum 2026 Model Context Protocol (MCP) Platform — SDK v2.3+, SEP-1865 `ui://` Apps, Multi-Round-Trip Elicitation & Zero-Trust OAuth 2.1**
+
+- 🎯 **What it does:** Provides a progressive 6-level engineering reference, unified dual-era MCP server, programmatic v2 reference host/client, and interactive sandboxed web inspector covering every capability of the Model Context Protocol (`2026-07-28` stateless specification + `2025-11-25` backwards compatibility).
+- ⚙️ **Architecture & Key Mechanisms:**
+  - **6 Progressive Levels of MCP Primitives**: Covers foundational tools, UTF-8/binary resources, and multi-turn prompts; validated `outputSchema` (`structuredContent`), `ToolAnnotations`, **SEP-973** theme-aware icons, PNG/WAV multimodal blocks, `O(log N)` `bisect` completions, and HMAC-signed stateless pagination cursors; **Stateless Streamable HTTP** (`/mcp`) with `O(1)` `Last-Event-ID` SSE replay, live `subscriptions/listen` push invalidation, and dynamic tool hot-reloading (`list_changed`).
+  - **Multi-Round-Trip Elicitation (`Resolve` + `Elicit`), SEP-1686 Durable Tasks & SEP-1865 MCP Apps**: Implements AES-GCM-sealed `InputRequiredResult` Form Elicitation, out-of-band URL Elicitation (`-32042`) for credential safety, durable background task state machines (`tasks/*`), and interactive **`ui://` HTML micro-applications (`text/html;profile=mcp-app`)** rendered inside a sandboxed `iframe` communicating via JSON-RPC `postMessage`.
+  - **Zero-Trust Enterprise Security & Observability**: Exposes **SEP-2127** discovery cards (`/.well-known/mcp.json`), `server.json` registry manifests, **OAuth 2.1 + PKCE (`S256`) + HTTPS Client ID Metadata Documents (CIMD) + `403 insufficient_scope` Step-Up Authorization**, **SEP-414** W3C `_meta.traceparent` propagation, and an HMAC-SHA256 cryptographic audit chain.
+- 🛠️ **Tech Stack:** Python 3.12, Official MCP Python SDK v2.3+, FastAPI, Pydantic v2, JSON-RPC 2.0, OAuth 2.1 PKCE/CIMD, Prometheus, Docker.
 
 ---
 
@@ -294,9 +308,9 @@ graph TD
 | :--- | :--- |
 | **Level-2 MLOps & Multimodal LLMOps** | Feast Feature Store (Parquet & Redis PIT), DVC & CML, MLflow Registry, Apache Airflow, Kubeflow Pipelines, Whisper ASR (VAD/WER/SNR), ONNX Runtime INT8, Multimodal RAGAS |
 | **System-1 Decision & Statistical Calibration** | Single-Pass Non-Autoregressive Inference (Jev), Choice/Noul/Score Primitives, RLCD Calibration (ECE/Brier/Platt), JevEval Inline RAG |
-| **Agent Frameworks & Distributed Protocols** | Google Antigravity (AGY) SDK, LangGraph, FIPA Contract Net Protocol, W3C CloudEvents, Topological DAG Execution (`graphlib`), Mem0 |
+| **Agent Frameworks & Distributed Protocols** | Model Context Protocol (MCP SDK v2.3+, Streamable HTTP, SEP-1865 `ui://` Apps, SEP-1686 Tasks), Google Antigravity (AGY) SDK, LangGraph, FIPA Contract Net Protocol, W3C CloudEvents, Topological DAG Execution (`graphlib`), Mem0 |
 | **Vector Databases & Retrieval Engines** | Qdrant, Redis (Semantic Cache & Online Store), HyDE, Reciprocal Rank Fusion (RRF), Cross-Encoders, NetworkX Graph-RAG (PPR), Vectorized NumPy MMR |
-| **Security, Moderation & Guardrails** | Llama-Guard 3, Reversible Single-Pass PII Vault, Anti-Jailbreak & Base64 Payload Inspection, HMAC/SHA-256 Tamper-Evident Audit Chains, GDPR/LGPD Privacy Governance |
+| **Security, Moderation & Guardrails** | OAuth 2.1 + PKCE (`S256`) & CIMD Step-Up Auth, Llama-Guard 3, Reversible Single-Pass PII Vault, Anti-Jailbreak & Base64 Payload Inspection, HMAC/SHA-256 Tamper-Evident Audit Chains, GDPR/LGPD Privacy Governance |
 | **LLMOps, Evaluation & Observability** | RAGAS, DeepEval, G-Eval CoT, Atomic Claim Decomposition, Cohen's Kappa, Langfuse, OpenTelemetry, MLflow, Prometheus, Grafana |
 | **Software Engineering & Runtime** | Python 3.12, FastAPI (REST & WebSocket), Concurrent AsyncIO, Pydantic v2, PyTorch, NumPy BLAS/SIMD, Kubernetes (HPA/VPA), Docker & Docker Compose, Ruff, Mypy Strict |
 
